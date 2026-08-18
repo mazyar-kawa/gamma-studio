@@ -1,36 +1,31 @@
-import type { MetadataRoute } from "next";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from "@/lib/constants";
+import type { MetadataRoute } from 'next'
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE } from '@/lib/constants'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${SITE_NAME} — ${SITE_TAGLINE}`,
     short_name: SITE_NAME,
     description: SITE_DESCRIPTION,
-    start_url: "/",
-    display: "standalone",
-    background_color: "#f8f6f0",
-    theme_color: "#f8f6f0",
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#f8f6f0',
+    theme_color: '#f8f6f0',
     icons: [
       {
-        src: "/images/metadata/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
+        src: '/gamma-studio-dark.svg',
+        sizes: '512x512',
+        type: 'image/svg+xml',
       },
       {
-        src: "/images/metadata/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
+        src: '/gamma-studio-light.svg',
+        sizes: '512x512',
+        type: 'image/svg+xml',
       },
       {
-        src: "/images/metadata/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/images/metadata/android-chrome-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
+        src: '/images/metadata/favicon.png',
+        sizes: '32x32',
+        type: 'image/png',
       },
     ],
-  };
+  }
 }

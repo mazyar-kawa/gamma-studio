@@ -9,7 +9,7 @@ interface Props {
   className?: string
 }
 
-const MyLogo: React.FC<Props> = ({ className = 'size-16' }) => {
+const MyLogo: React.FC<Props> = ({ className = 'size-18' }) => {
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -35,7 +35,7 @@ const MyLogo: React.FC<Props> = ({ className = 'size-16' }) => {
   return (
     <Link href='/' className='flex items-center'>
       <Image
-        src={`/gamma-ui-${resolvedTheme}.svg`}
+        src={`/gamma-studio-${resolvedTheme}.svg`}
         alt='gamma logo'
         width={500}
         height={500}
