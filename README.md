@@ -93,17 +93,6 @@ Open **[http://localhost:3000](http://localhost:3000)**.
 
 ---
 
-## Environment variables
-
-| Variable | Required | Description |
-| --- | :---: | --- |
-| `NEXT_PUBLIC_SITE_URL` | No | Canonical URL for Open Graph, sitemap & JSON-LD (`https://studio.gammaui.com`) |
-| `GITHUB_TOKEN` | No | GitHub API token for star badge rate limits |
-
-See [`.env.example`](.env.example).
-
----
-
 ## Tech stack
 
 | Layer | Tools |
