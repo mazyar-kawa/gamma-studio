@@ -1,0 +1,39 @@
+import type { CategoryMeta } from "./types"
+
+export const CATEGORIES: CategoryMeta[] = [
+  { id: "all", label: "All", icon: "lucide:layers" },
+  { id: "aura", label: "Aura", icon: "lucide:sun" },
+  { id: "mesh", label: "Mesh", icon: "lucide:hexagon" },
+  { id: "nebula", label: "Nebula", icon: "lucide:cloud" },
+  { id: "prism", label: "Prism", icon: "lucide:triangle" },
+  { id: "lattice", label: "Lattice", icon: "lucide:grid-3x3" },
+  { id: "grain", label: "Grain", icon: "lucide:scan-line" },
+  { id: "glass", label: "Glass", icon: "lucide:diamond" },
+  { id: "flux", label: "Flux", icon: "lucide:droplets" },
+  { id: "aurora", label: "Aurora", icon: "lucide:sparkles" },
+  { id: "noise", label: "Noise", icon: "lucide:audio-lines" },
+  { id: "halo", label: "Halo", icon: "lucide:circle-dot" },
+  { id: "dusk", label: "Dusk", icon: "lucide:sunset" },
+]
+
+export const FEATURED_IDS: string[] = [
+  "sunrise-drift",
+  "golden-hour",
+  "midnight-sapphire",
+  "grain-dusty-rose",
+  "aurora-nova",
+  "aurora-borealis",
+  "aurora-beams",
+  "midnight-horizon",
+  "champagne-fizz",
+  "silver-mist",
+  "arctic-frost",
+  "ember-glow",
+  "phantom-arc",
+  "vercel-edge-glow",
+  "blood-aurora",
+  "prism-spectral-edge",
+  "aurora-borealis-veil",
+  "halo-solar-core",
+  "dusk-ember-line",
+]

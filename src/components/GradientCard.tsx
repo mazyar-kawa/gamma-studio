@@ -1,0 +1,298 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
+import { Icon } from "@iconify/react";
+import { useGradients } from "@/components/GradientProvider";
+import { GrainOverlay } from "@/components/GrainOverlay";
+import { gradientLayerStyle, isLightBase, type Gradient, CATEGORIES } from "@/lib/gradients";
+import { generateAIPrompt } from "@/lib/generateAIPrompt";
+import { copyToClipboard } from "@/lib/clipboard";
+
+interface Props {
+  gradient: Gradient;
+}
+
+export function GradientCard({ gradient }: Props) {
+  const { active, apply, preview, toggleFullscreen, flashTick, favorites, toggleFavorite, showToast } =
+    useGradients();
+  const isActive = active?.id === gradient.id;
+  const isFavorite = favorites.includes(gradient.id);
+
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const cardRef = useRef<HTMLDivElement>(null);
+  const highlightRef = useRef<HTMLDivElement>(null);
+
+  /* Touch devices reveal the action overlay only after an explicit tap
+     (first tap opens, second tap acts). Detected via pointer: coarse. */
+  const [tapOpen, setTapOpen] = useState(false);
+  const coarseRef = useRef(false);
+  useEffect(() => {
+    coarseRef.current = window.matchMedia("(pointer: coarse)").matches;
+  }, []);
+
+  /* Close the touch-open overlay when the user taps anywhere outside the card */
+  useEffect(() => {
+    if (!tapOpen) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (cardRef.current && !cardRef.current.contains(e.target as Node)) {
+        setTapOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [tapOpen]);
+
+  /* Flash this card when the user returns to the gallery from a preview */
+  const [flash, setFlash] = useState(false);
+  const prevFlashTick = useRef(flashTick);
+  useEffect(() => {
+    const changed = prevFlashTick.current !== flashTick;
+    prevFlashTick.current = flashTick;
+    if (changed && isActive) {
+      setFlash(true);
+      const t = setTimeout(() => setFlash(false), 1600);
+      return () => clearTimeout(t);
+    }
+  }, [flashTick, isActive]);
+
+  const categoryMeta = CATEGORIES.find((c) => c.id === gradient.category);
+  const lightBackdrop = isLightBase(gradient.base);
+
+  /* ── 3D tilt effect original ── */
+  const handleMouseMove = useCallback((e: MouseEvent<HTMLDivElement>) => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const card = cardRef.current;
+    const highlight = highlightRef.current;
+    if (!card || !highlight) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+
+    const rotateX = (y - 0.5) * -12;
+    const rotateY = (x - 0.5) * 12;
+
+    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    highlight.style.opacity = "1";
+    highlight.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(255,255,255,0.25), transparent 60%)`;
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    const card = cardRef.current;
+    const highlight = highlightRef.current;
+    if (card) card.style.transform = "";
+    if (highlight) highlight.style.opacity = "0";
+  }, []);
+
+  const handlePreview = useCallback(() => {
+    preview(gradient.id);
+  }, [preview, gradient.id]);
+
+  const handleCustomize = useCallback(() => {
+    apply(gradient.id);
+    toggleFullscreen();
+  }, [apply, gradient.id, toggleFullscreen]);
+
+  const handleCopyPrompt = useCallback(async () => {
+    const text = generateAIPrompt(
+      gradient,
+      gradient.layers,
+      gradient.grain ?? false,
+      !gradient.dark,
+    );
+    const ok = await copyToClipboard(text.trim());
+    if (ok) {
+      setCopied("prompt");
+      showToast(`Copied AI prompt`);
+    } else {
+      showToast("Failed to copy", "error");
+    }
+    setTimeout(() => setCopied(null), 2000);
+  }, [gradient, showToast]);
+
+  const handleCardKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.target !== e.currentTarget) return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        preview(gradient.id);
+      }
+    },
+    [preview, gradient.id],
+  );
+
+  const handleToggleFavorite = useCallback(
+    (e: MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleFavorite(gradient.id);
+    },
+    [toggleFavorite, gradient.id],
+  );
+
+  /* On touch, the first tap only reveals the action overlay; a second tap on
+     a button performs the action. Overlay buttons are pointer-events: none
+     while hidden, so this first tap always lands on the card itself. */
+  const handleCardClick = useCallback((e: MouseEvent<HTMLDivElement>) => {
+    if (!coarseRef.current) return;
+    if ((e.target as HTMLElement).closest(".swatch-overlay")) return;
+    e.preventDefault();
+    setTapOpen((o) => !o);
+    e.currentTarget.blur();
+  }, []);
+
+  return (
+    <div
+      id={`g-${gradient.id}`}
+      className="scroll-mt-24 outline-none squircle-element-xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      data-card
+      tabIndex={0}
+      role="group"
+      aria-label={`${gradient.name}: ${gradient.desc}`}
+      onKeyDown={handleCardKeyDown}
+    >
+      {/* ── CARD PRINCIPAL (Sin el wrapper del borde giratorio, con sombra sutil y esquinas redondeadas amplias) ── */}
+      <div
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleCardClick}
+        className={`swatch marks relative w-full aspect-[1/1.15] squircle-element-xl border-r border-b border-border overflow-hidden transition-all duration-300 ease-out shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] ${isActive ? "is-active" : ""
+          } ${flash ? "card-flash" : ""} ${tapOpen ? "is-tap-open" : ""}`}
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Preview stack — isolated so blend modes composite against the preset base only */}
+        <div
+          className="absolute inset-0 isolate"
+          style={{ backgroundColor: gradient.base }}
+        >
+          {gradient.layers.map((layer, i) => (
+            <div
+              key={i}
+              className="absolute inset-0"
+              style={gradientLayerStyle(layer, lightBackdrop, { maxBlur: 24 })}
+            />
+          ))}
+          {gradient.grain && <GrainOverlay className="absolute inset-0" />}
+        </div>
+
+        {/* 3D highlight that follows cursor */}
+        <div
+          ref={highlightRef}
+          className="absolute inset-0 z-20 pointer-events-none transition-opacity duration-300"
+          style={{ opacity: 0 }}
+        />
+
+        {/* Hover overlay with actions */}
+        <div className="swatch-overlay absolute inset-0 bg-black/20 backdrop-blur-[1px] grid grid-cols-1 gap-2 place-content-center z-30 p-4">
+          <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={handlePreview}
+              className="w-full flex items-center justify-center gap-1.5 bg-white/95 text-[#14130f] px-3 py-2 text-[12px] font-medium hover:bg-white transition-colors squircle-element shadow-lg"
+            >
+              <Icon icon="lucide:eye" width={13} height={13} /> Preview
+            </button>
+            <button
+              onClick={handleCustomize}
+              className="w-full flex items-center justify-center gap-1.5 bg-white/20 text-white px-3 py-2 text-[12px] font-medium hover:bg-white/40 transition-colors backdrop-blur-sm squircle-element border border-white/20 shadow-lg"
+            >
+              <Icon icon="lucide:sliders-horizontal" width={13} height={13} /> Customize
+            </button>
+          </div>
+          <button
+            onClick={handleCopyPrompt}
+            title="Copy AI prompt for this gradient"
+            aria-label="Copy AI prompt for this gradient"
+            className={`w-full flex items-center justify-center gap-2 text-white text-[12px] font-medium py-2 px-3 squircle-element transition-all duration-300
+      ${copied === "prompt"
+                ? "bg-gradient-to-r from-emerald-600/80 to-teal-600/80 hover:from-emerald-600 hover:to-teal-600 shadow-[0_2px_12px_rgba(16,185,129,0.3)]"
+                : "bg-gradient-to-r from-violet-600/80 to-fuchsia-600/80 hover:from-violet-600 hover:to-fuchsia-600 shadow-[0_2px_12px_rgba(139,92,246,0.3)] hover:shadow-[0_4px_20px_rgba(139,92,246,0.5)]"
+              }`}
+          >
+            <Icon
+              icon={copied === "prompt" ? "lucide:check" : "lucide:sparkles"}
+              width={13}
+              height={13}
+              className={`transition-transform duration-200 ${copied === "prompt" ? "scale-110" : ""}`}
+            />
+            <span>{copied === "prompt" ? "Copied!" : "Copy Prompt"}</span>
+          </button>
+          {/* <button
+            onClick={handleCopyAll}
+            title="Copy all formats"
+            aria-label="Copy all formats"
+            className="w-full flex items-center justify-center gap-1.5 bg-white/20 text-white px-3 py-2 text-[12px] font-medium hover:bg-white/40 transition-colors backdrop-blur-sm squircle-element border border-white/20 shadow-lg"
+          >
+            <Icon
+              icon={copied === "all" ? "lucide:check" : "lucide:clipboard-copy"}
+              width={13}
+              height={13}
+            />
+            {copied === "all" ? "Copied!" : "Copy CSS"}
+          </button> */}
+        </div>
+
+        {/* Active badge */}
+        {isActive && (
+          <span className="glass-white absolute top-4 left-1/2 -translate-x-1/2 inline-flex items-center justify-center px-3 py-1.5 rounded-full text-[11px] font-bold shadow-lg z-30 tracking-wider">
+            <span className="uppercase tracking-widest text-[10px] text-neutral-950 font-black">
+              Active
+            </span>
+          </span>
+        )}
+
+        {/* Favorite toggle */}
+        <button
+          onClick={handleToggleFavorite}
+          title={isFavorite ? "Remove from favorites" : "Save as favorite"}
+          aria-label={isFavorite ? "Remove from favorites" : "Save as favorite"}
+          aria-pressed={isFavorite}
+          className={`absolute top-4 right-4 z-40 flex items-center justify-center p-1.5 transition-all duration-200 ${isFavorite
+            ? "text-rose-500 scale-110 drop-shadow-[0_2px_8px_rgba(244,63,94,0.4)]"
+            : "text-white/60 hover:text-white hover:scale-110"
+            }`}
+        >
+          <Icon
+            icon="mdi:heart"
+            width={16}
+            height={16}
+            className={isFavorite ? "fill-current" : ""}
+          />
+        </button>
+
+        {/* Category badge */}
+        {categoryMeta && (
+          <span className="absolute top-4 left-4 flex items-center gap-1 bg-black/40 text-white/80 text-[9px] font-medium uppercase tracking-wider px-2 py-1 z-10 squircle-element backdrop-blur-sm border border-white/10">
+            <Icon icon={categoryMeta.icon} width={10} height={10} /> {categoryMeta.label}
+          </span>
+        )}
+
+        {/* Name + description (Con mayor separación y padding de margen) */}
+        <div className="absolute left-5 bottom-5 right-5 leading-tight z-10 flex items-start justify-between gap-2">
+          <div className="flex flex-col gap-1.5">
+            <p
+              className="text-base font-semibold"
+              style={{ color: gradient.cardText ?? "#ffffff" }}
+            >
+              {gradient.name}
+            </p>
+            <p
+              className="text-xs"
+              style={{ color: gradient.cardText ?? "#ffffff", opacity: 0.7 }}
+            >
+              {gradient.desc}
+            </p>
+          </div>
+        </div>
+
+        {/* Corner marks */}
+        <Icon icon="lucide:plus" className="corner-mark tl" />
+        <Icon icon="lucide:plus" className="corner-mark tr" />
+        <Icon icon="lucide:plus" className="corner-mark bl" />
+        <Icon icon="lucide:plus" className="corner-mark br" />
+      </div>
+    </div>
+  );
+}
