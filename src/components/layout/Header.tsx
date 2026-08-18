@@ -22,12 +22,15 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed z-50 w-full transition-all duration-300 ${
         isScrolled
           ? "glass border-b border-border"
           : "border-b border-transparent bg-transparent"
       }`}
-      style={{ height: "var(--header-height)" }}
+      style={{
+        height: "var(--header-height)",
+        top: "var(--banner-height, 0px)",
+      }}
     >
       <div className="mx-auto max-w-7xl w-full px-6 h-full flex items-center justify-between">
         <MyLogo className="h-10 w-10" />

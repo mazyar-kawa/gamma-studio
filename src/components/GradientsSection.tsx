@@ -225,7 +225,7 @@ export function GradientsSection() {
       {/* Hero — same section, flows into gallery below */}
       <div
         ref={heroRef}
-        className='reveal relative mx-auto flex min-h-[min(88svh,820px)] w-full max-w-7xl flex-col items-center justify-center px-6 pt-[calc(var(--header-height)+2rem)] pb-16 text-center'
+        className='reveal relative mx-auto flex min-h-[min(88svh,820px)] w-full max-w-7xl flex-col items-center justify-center px-6 pt-[calc(var(--header-height)+var(--banner-height,0px)+2rem)] pb-16 text-center'
       >
         <div className='group glass mb-8 inline-flex items-center gap-2 overflow-hidden rounded-full border border-white/25 px-4 py-2 text-sm shadow-lg dark:border-white/10'>
           <span className='relative flex size-2 shrink-0' aria-hidden='true'>

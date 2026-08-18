@@ -8,6 +8,7 @@ import {
   SITE_URL,
 } from "@/lib/constants"
 import { ThemeProvider } from "@/components/theme-provider"
+import { GammaUiBanner } from "@/components/GammaUiBanner"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import "./globals.css"
 
@@ -192,6 +193,7 @@ export default function RootLayout({
             >
               Skip to content
             </a>
+            <GammaUiBanner />
             {children}
           </TooltipProvider>
         </ThemeProvider>
