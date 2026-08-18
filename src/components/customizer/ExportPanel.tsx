@@ -100,7 +100,7 @@ export function ExportPanel({ format, onFormatChange, code, copied, onCopy }: Pr
         role="tabpanel"
         id="export-code-panel"
         aria-labelledby={`fmt-${format}`}
-        className="relative flex flex-1 min-h-[200px] bg-black/40 border border-white/10 squircle-element overflow-hidden"
+        className="relative min-h-[200px] bg-black/40 border border-white/10 squircle-element"
       >
         <CodeBlock code={code} language={FORMAT_LANGS[format]} />
         <button

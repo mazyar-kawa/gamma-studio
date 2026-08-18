@@ -114,6 +114,33 @@ export function Customizer() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
+  /* ── Lock page scroll while customizer is open ── */
+  useEffect(() => {
+    if (!fullscreen) return;
+
+    const scrollY = window.scrollY;
+    const previousOverflow = document.body.style.overflow;
+    const previousPosition = document.body.style.position;
+    const previousTop = document.body.style.top;
+    const previousWidth = document.body.style.width;
+
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.body.style.position = previousPosition;
+      document.body.style.top = previousTop;
+      document.body.style.width = previousWidth;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      window.scrollTo(0, scrollY);
+    };
+  }, [fullscreen]);
+
   /* ── Focus trap: keep Tab navigation inside the dialog, restore focus on close ── */
   useEffect(() => {
     if (!fullscreen) return;
@@ -319,14 +346,16 @@ export function Customizer() {
       role="dialog"
       aria-modal="true"
       aria-label="Gradient customizer"
-      className="fixed inset-0 z-[100] flex"
+      className="fixed inset-x-0 bottom-0 z-[100] flex min-h-0 flex-col overflow-hidden md:flex-row"
       style={{
+        top: "var(--banner-height, 0px)",
+        height: "calc(100dvh - var(--banner-height, 0px))",
         animation: "fullscreen-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both",
       }}
     >
       {/* ══ Left: Live Preview ══ */}
       <div
-        className="relative flex-1 overflow-hidden transition-[background-color] duration-300 ease-out"
+        className="relative h-[38dvh] min-h-0 shrink-0 overflow-hidden transition-[background-color] duration-300 ease-out md:h-auto md:flex-1"
         style={{ backgroundColor: previewBase }}
         data-customizer-preview
       >
@@ -403,9 +432,9 @@ export function Customizer() {
         </button>
 
         {/* Gradient name overlay */}
-        <div className="absolute bottom-6 left-6 z-20">
+        <div className="absolute bottom-4 left-4 z-20 md:bottom-6 md:left-6">
           <h2
-            className="text-xl font-semibold"
+            className="text-lg font-semibold md:text-xl"
             style={{ color: isDark ? "#ffffff" : "#14130f" }}
           >
             {active.name}
@@ -421,9 +450,9 @@ export function Customizer() {
 
       {/* ══ Right: Control Panel ══ */}
       {/* Aplicando los tonos oscuros de la imagen: #0a0a0a para el panel general y bordes sutiles white/5 */}
-      <div className="w-[420px] bg-[#0a0a0a] border-l border-white/5 flex flex-col overflow-hidden">
+      <div className="flex min-h-0 w-full flex-1 flex-col overflow-hidden border-t border-white/5 bg-[#0a0a0a] md:h-full md:w-[420px] md:shrink-0 md:flex-none md:border-t-0 md:border-l">
         {/* Panel header - Fondo ligeramente contrastado */}
-        <div className="flex items-center justify-between px-5 py-2 border-b border-white/5 bg-[#0d0d0d]">
+        <div className="flex shrink-0 items-center justify-between border-b border-white/5 bg-[#0d0d0d] px-5 py-2">
           <div className="flex items-center gap-2">
             <Icon icon="lucide:sliders-horizontal" width={15} height={15} className="text-white/60" />
             <span className="text-[13px] font-medium text-white/90">Customize</span>
@@ -495,7 +524,7 @@ export function Customizer() {
         </div>
 
         {/* Scrollable controls */}
-        <div className="flex-1 min-h-0 flex flex-col overflow-y-auto px-5 pt-6 pb-0 space-y-4 ui-styled-scrollbar">
+        <div className="ui-styled-scrollbar flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain px-5 pt-6 pb-4">
           {/* Scrollbar CSS sutil para igualar el aspecto técnico */}
           <style>{`
             .ui-styled-scrollbar::-webkit-scrollbar {
@@ -564,7 +593,7 @@ export function Customizer() {
         </div>
 
         {/* Fixed export actions - Fondo contrastado abajo */}
-        <div className="border-t border-white/5 bg-[#0d0d0d]">
+        <div className="shrink-0 border-t border-white/5 bg-[#0d0d0d]">
           <div className="px-5 pt-3 pb-2 flex flex-col gap-2">
             <Button
               onClick={() => handleCopy(deferredAiPrompt, "AI Prompt")}

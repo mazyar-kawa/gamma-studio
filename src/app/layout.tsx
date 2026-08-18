@@ -4,6 +4,7 @@ import {
   AURA_URL,
   SITE_DESCRIPTION,
   SITE_NAME,
+  SITE_OG_DESCRIPTION,
   SITE_TAGLINE,
   SITE_URL,
 } from "@/lib/constants"
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  authors: [{ name: "Gamma Gradients", url: SITE_URL }],
-  creator: "Gamma Gradients",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
   generator: "Next.js",
   category: "technology",
   keywords: [
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: `${SITE_NAME} — Gradient Generator & Maker`,
-    description: SITE_DESCRIPTION,
+    description: SITE_OG_DESCRIPTION,
     locale: "en_US",
     images: [
       {
@@ -87,7 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Gradient Generator & Maker`,
-    description: SITE_DESCRIPTION,
+    description: SITE_OG_DESCRIPTION,
     images: [
       {
         url: "/images/metadata/og-image.png",
@@ -126,7 +127,7 @@ const siteJsonLd = {
     {
       "@type": "WebSite",
       name: SITE_NAME,
-      alternateName: "Gamma gradients",
+      alternateName: "Gamma Studio gradients",
       url: SITE_URL,
       description: SITE_DESCRIPTION,
       inLanguage: "en",

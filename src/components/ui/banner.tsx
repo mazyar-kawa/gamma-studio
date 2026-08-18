@@ -49,7 +49,7 @@ export function Banner({
       id={id}
       {...props}
       className={cn(
-        "sticky top-0 z-[60] flex flex-row items-center justify-center px-4 text-center text-sm font-medium",
+        "fixed top-0 z-[60] flex w-full flex-row items-center justify-center px-4 text-center text-sm font-medium",
         variant === "normal" && "bg-secondary text-secondary-foreground",
         variant === "rainbow" && "bg-background text-foreground",
         className,
