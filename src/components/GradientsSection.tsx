@@ -8,6 +8,7 @@ import {
   type KeyboardEvent,
 } from 'react'
 import { Icon } from '@iconify/react'
+import { motion, useReducedMotion } from 'motion/react'
 import {
   Heart,
   RotateCcw,
@@ -46,6 +47,7 @@ export function GradientsSection() {
   const [count, setCount] = useState(INITIAL_CARDS)
   const catRefs = useRef<(HTMLButtonElement | null)[]>([])
   const sentinelRef = useRef<HTMLDivElement>(null)
+  const shouldReduceMotion = useReducedMotion()
   const heroRef = useReveal<HTMLDivElement>({ stagger: 0 })
   const galleryRef = useReveal<HTMLDivElement>({ stagger: 1 })
 
@@ -365,14 +367,17 @@ export function GradientsSection() {
         </div>
 
         <div className='mb-8 flex max-w-full flex-wrap items-center gap-3'>
-          <div
+          <motion.div
             role='tablist'
             aria-label='Gradient categories'
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             onKeyDown={(e) => {
               const idx = CATEGORIES.findIndex((c) => c.id === category)
               if (idx !== -1) handleTabKeyDown(e, idx)
             }}
-            className='glass squircle-element flex max-w-full flex-nowrap items-center gap-1 overflow-x-auto rounded-xl border border-white/25 p-1.5 shadow-lg shadow-black/5 scrollbar-none dark:border-white/10 dark:shadow-black/25 sm:inline-flex sm:flex-wrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none]'
+            className='glass relative flex max-w-full flex-nowrap items-center gap-1 overflow-x-auto rounded-full border border-white/25 p-1.5 shadow-lg shadow-black/5 scrollbar-none dark:border-white/10 dark:shadow-black/25 sm:inline-flex sm:flex-wrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none]'
           >
             {CATEGORIES.map((cat, i) => {
               const isActive = category === cat.id
@@ -389,18 +394,34 @@ export function GradientsSection() {
                   tabIndex={isActive ? 0 : -1}
                   onClick={() => applyCategory(cat.id as CategoryFilter)}
                   className={cn(
-                    'flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-medium uppercase tracking-wider transition-all duration-200',
+                    'relative flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium uppercase tracking-wider transition-colors duration-200',
                     isActive
-                      ? 'bg-primary text-primary-foreground shadow-sm shadow-primary/20 ring-1 ring-white/20'
+                      ? 'text-primary-foreground'
                       : 'text-muted-foreground hover:bg-white/20 hover:text-foreground dark:hover:bg-white/10',
                   )}
                 >
-                  <Icon icon={cat.icon} width={13} height={13} />
-                  {cat.label}
+                  {isActive ? (
+                    <motion.span
+                      layoutId='category-tab-pill'
+                      className='absolute inset-0 rounded-full bg-primary shadow-sm shadow-primary/20 ring-1 ring-white/20'
+                      transition={
+                        shouldReduceMotion
+                          ? { duration: 0 }
+                          : { type: 'spring', stiffness: 420, damping: 32 }
+                      }
+                    />
+                  ) : null}
+                  <motion.span
+                    className='relative z-10 flex items-center gap-1.5'
+                    whileTap={shouldReduceMotion ? undefined : { scale: 0.96 }}
+                  >
+                    <Icon icon={cat.icon} width={13} height={13} />
+                    {cat.label}
+                  </motion.span>
                 </button>
               )
             })}
-          </div>
+          </motion.div>
 
           <label className='glass flex h-9 items-center gap-2 rounded-lg border border-border px-3 text-muted-foreground transition-colors focus-within:border-primary focus-within:text-foreground'>
             <Search className='size-3.5' />
