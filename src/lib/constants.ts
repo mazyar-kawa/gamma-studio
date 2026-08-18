@@ -17,8 +17,12 @@ export const GAMMA_UI_RAINBOW_COLORS = [
   'transparent',
 ]
 
-export const SITE_URL = 'https://gamma-ui-studio.vercel.app'
+/** Gamma Studio — use a subdomain so gammaui.com stays the main Gamma UI site */
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://studio.gammaui.com'
 export const SITE_NAME = 'Gamma Studio'
 export const SITE_TAGLINE = 'Ambient gradient backgrounds'
 export const SITE_DESCRIPTION =
-  'Free CSS gradient generator with 500+ layered ambient, mesh, aurora, and geometric patterns. Tune the layers and copy ready CSS, Tailwind, or SVG into any interface.'
+  'Free CSS gradient generator with 500+ layered ambient, mesh, and aurora patterns. Tune layers and copy CSS, Tailwind, or SVG.'
+export const SITE_OG_DESCRIPTION =
+  'Free CSS gradient generator with 500+ ambient, mesh & aurora patterns. Copy CSS, Tailwind, or SVG in one click.'

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { CONIC_GRADIENT, GITHUB_URL } from '@/lib/constants'
+import { CONIC_GRADIENT, GAMMA_UI_URL, GITHUB_URL } from '@/lib/constants'
 import MyLogo from '@/components/my-logo'
 
 export function Footer() {
@@ -35,7 +35,7 @@ export function Footer() {
         </div>
 
         <div className='flex flex-col items-start md:items-end gap-3 text-sm text-muted-foreground'>
-          <div className='flex items-center gap-4'>
+          <div className='flex flex-wrap items-center gap-x-4 gap-y-2'>
             <a
               href={GITHUB_URL}
               target='_blank'
@@ -44,7 +44,16 @@ export function Footer() {
             >
               GitHub
             </a>
-            <span className='text-muted-foreground/40'>·</span>
+            <span className='hidden text-muted-foreground/40 sm:inline'>·</span>
+            <a
+              href={GAMMA_UI_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hover:text-foreground transition-colors'
+            >
+              Gamma UI
+            </a>
+            <span className='hidden text-muted-foreground/40 sm:inline'>·</span>
             <Link
               href='/llms.txt'
               className='hover:text-foreground transition-colors flex items-center gap-1.5'

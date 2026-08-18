@@ -1,4 +1,4 @@
-# Gamma Gradients catalog
+# Gamma Studio catalog
 
 512 layered CSS gradient patterns. Based on Aura by Cristian Olivera.
 

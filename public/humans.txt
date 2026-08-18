@@ -1,7 +1,9 @@
 /* TEAM */
-Project: Gamma Gradients
+Project: Gamma Studio
 Based on: Aura by Cristian Olivera
 Aura: https://github.com/CristianOlivera1/Aura
+Site: https://studio.gammaui.com
+Related: Gamma UI — https://gammaui.com
 
 /* THANKS */
 Cristian Olivera, Next.js, React, Tailwind CSS, TypeScript

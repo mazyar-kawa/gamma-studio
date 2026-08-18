@@ -1,11 +1,12 @@
-# Gamma Gradients
+# Gamma Studio
 
 > Ambient UI gradients built from layered CSS blend modes. Browse 500+ patterns, customize layers, and export CSS.
 
-Gamma is an open-source gradient gallery and generator based on Aura by Cristian Olivera.
+Gamma Studio is an open-source gradient gallery and generator based on Aura by Cristian Olivera.
 
 - Live site patterns: hover a card to preview, open the customizer to edit layers
-- Categories: aura, mesh, nebula, prism, lattice, grain, glass, flux, waves, aurora, geometric, noise, halo, dusk
+- Categories: aura, mesh, nebula, prism, lattice, grain, glass, flux, aurora, noise, halo, dusk
 - Export: CSS, Tailwind, CSS variables, CSS-in-JS, PNG, SVG, and an AI reconstruction prompt
+- Sister project: Gamma UI (https://gammaui.com) — main site; this app: https://studio.gammaui.com
 
 Source: based on https://github.com/CristianOlivera1/Aura (MIT)

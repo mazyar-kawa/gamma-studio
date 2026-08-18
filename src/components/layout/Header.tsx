@@ -6,7 +6,7 @@ import { useGradients } from "@/components/GradientProvider"
 import { GitHubBadge } from "@/components/ui/GitHubBadge"
 import { GitHubIcon } from "@/components/ui/github-icon"
 import { Button } from "@/components/ui/button"
-import { GITHUB_URL } from "@/lib/constants"
+import { GAMMA_UI_URL, GITHUB_URL } from "@/lib/constants"
 import MyLogo from "@/components/my-logo"
 
 export function Header() {
@@ -49,6 +49,12 @@ export function Header() {
                 <Sun className="size-4" />
               )}
             </span>
+          </Button>
+
+          <Button variant="outline" size="sm" asChild className="hidden sm:inline-flex">
+            <a href={GAMMA_UI_URL} target="_blank" rel="noopener noreferrer">
+              Gamma UI
+            </a>
           </Button>
 
           <Button variant="outline" size="sm" asChild>
