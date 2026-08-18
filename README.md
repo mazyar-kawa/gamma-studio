@@ -104,34 +104,6 @@ See [`.env.example`](.env.example).
 
 ---
 
-## Deploy on Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mazyar-kawa/gamma-studio)
-
-Gamma Studio is designed to run on a **subdomain** so [gammaui.com](https://gammaui.com) stays your main Gamma UI site.
-
-### Recommended domain
-
-```
-studio.gammaui.com  →  Gamma Studio (this repo)
-gammaui.com         →  Gamma UI (main site)
-```
-
-### Steps
-
-1. Import the repo in [Vercel](https://vercel.com)
-2. **Settings → Domains** → add `studio.gammaui.com`
-3. Add the DNS record at your registrar:
-
-   | Type | Name | Value |
-   | --- | --- | --- |
-   | `CNAME` | `studio` | `cname.vercel-dns.com` |
-
-4. **Settings → Environment Variables** → `NEXT_PUBLIC_SITE_URL=https://studio.gammaui.com`
-5. Redeploy
-
----
-
 ## Tech stack
 
 | Layer | Tools |
