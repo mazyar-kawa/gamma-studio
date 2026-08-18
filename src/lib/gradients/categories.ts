@@ -32,6 +32,7 @@ export const FEATURED_IDS: string[] = [
   "phantom-arc",
   "vercel-edge-glow",
   "blood-aurora",
+  "sky-aurora",
   "prism-spectral-edge",
   "aurora-borealis-veil",
   "halo-solar-core",

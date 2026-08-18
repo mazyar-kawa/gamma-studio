@@ -75,6 +75,62 @@ export const NEBULA_PRESETS: Gradient[] = [
     },
 
   {
+      id: "sky-aurora",
+      name: "Sky Aurora",
+      category: "nebula",
+      mood: "cool",
+      desc: "Cyan and cloud-white aurora curtains drifting across a midnight sky",
+      dark: true,
+      text: "#e0f4ff",
+      base: "#020810",
+      grain: true,
+      layers: [
+        {
+          background:
+            "linear-gradient(154deg, transparent 18%, rgba(10,40,70,0.06) 29%, rgba(56,189,248,0.40) 36%, rgb(255,255,255) 42%, rgba(96,165,250,0.32) 48%, rgba(14,116,144,0.22) 55%, rgba(125,211,252,0.30) 62%, rgba(10,50,80,0.08) 68%, transparent 82%)",
+          blendMode: "screen",
+          blur: 34,
+          opacity: 1,
+        },
+        {
+          background:
+            "linear-gradient(128deg, transparent 28%, rgba(15,60,90,0.06) 38%, rgba(34,211,238,0.35) 43%, rgb(255,255,255) 48%, rgba(96,165,250,0.22) 52%, rgba(56,189,248,0.25) 57%, rgba(20,70,100,0.10) 62%, transparent 76%)",
+          blendMode: "screen",
+          blur: 30,
+          opacity: 0.9,
+        },
+        {
+          background:
+            "radial-gradient(ellipse 78% 20% at 51% 53%, rgba(56,189,248,0.24) 0%, rgba(30,80,120,0.10) 45%, transparent 82%)",
+          blendMode: "screen",
+          blur: 28,
+          opacity: 0.9,
+        },
+        {
+          background:
+            "radial-gradient(ellipse 48% 9% at 52% 50%, rgba(224,242,254,0.14) 0%, rgba(125,211,252,0.06) 45%, transparent 80%)",
+          blendMode: "screen",
+          blur: 70,
+          opacity: 1,
+        },
+        {
+          background:
+            "linear-gradient(to top, rgba(2,8,16,0.90) 0%, rgba(2,8,16,0.58) 28%, rgba(2,8,16,0.20) 55%, transparent 78%)",
+          blendMode: "multiply",
+          blur: 32,
+          opacity: 0.9,
+        },
+        {
+          background:
+            "radial-gradient(ellipse 50% 28% at 72% 18%, rgba(186,230,253,0.10) 0%, rgba(56,189,248,0.04) 45%, transparent 82%)",
+          blendMode: "screen",
+          blur: 55,
+          opacity: 0.7,
+        },
+      ],
+    },
+
+  {
       id: "void-serpent",
       name: "Void Serpent",
       category: "nebula",
