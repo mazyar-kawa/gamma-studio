@@ -21,17 +21,26 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     const el = ref.current;
     if (!el) return;
 
+    const coarse = window.matchMedia("(pointer: coarse)").matches
+    const mobileUa = /Android|SamsungBrowser|Mobile/i.test(navigator.userAgent)
+
     // Set stagger delay
     if (stagger > 0) {
-      el.style.setProperty("--reveal-delay", `${stagger * 80}ms`);
+      el.style.setProperty("--reveal-delay", `${stagger * 80}ms`)
     }
 
-    let observer: IntersectionObserver | null = null;
+    let observer: IntersectionObserver | null = null
 
     const reveal = () => {
-      el.classList.add("is-visible");
-      observer?.disconnect();
-    };
+      el.classList.add("is-visible")
+      observer?.disconnect()
+    }
+
+    // Touch / mobile browsers: always show content immediately.
+    if (coarse || mobileUa) {
+      reveal()
+      return
+    }
 
     // Content already on screen when the page loads must appear immediately,
     // without waiting for an IntersectionObserver tick. This keeps the first
