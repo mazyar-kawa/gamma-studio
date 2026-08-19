@@ -568,3 +568,32 @@
   corner-shape: squircle;
   border-radius: var(--radius-xl);
 }
+
+/* Samsung / Android: isolation + blend on same GPU layer often hides patterns */
+.gradient-stack {
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+@media (pointer: coarse) {
+  .gradient-stack {
+    isolation: auto;
+  }
+
+  .swatch {
+    transform-style: flat;
+  }
+}
+
+.gradient-layer-blend {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@supports not (corner-shape: squircle) {
+  .squircle-element,
+  .squircle-element-xl {
+    corner-shape: round;
+  }
+}
