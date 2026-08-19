@@ -1,516 +1,609 @@
 # Gamma Studio catalog
 
-512 layered CSS gradient patterns. Based on Aura by Cristian Olivera.
+603 layered CSS gradient patterns. Based on Aura by Cristian Olivera.
 
-- Sunrise Drift (`sunrise-drift`)
-- Ember Glow (`ember-glow`)
-- Glacier Mist (`glacier-mist`)
-- Orchid Bloom (`orchid-bloom`)
-- Warm Ash (`warm-ash`)
-- Golden Hour (`golden-hour`)
-- Rose Gold (`rose-gold`)
-- Sunset Boulevard (`sunset-boulevard`)
-- Champagne Fizz (`champagne-fizz`)
-- Midnight Sapphire (`midnight-sapphire`)
-- Ocean Pearl (`ocean-pearl`)
-- Arctic Frost (`arctic-frost`)
-- Silver Mist (`silver-mist`)
-- Deep Lagoon (`deep-lagoon`)
-- Eclipse Flare (`eclipse-flare`)
-- Midnight Horizon (`midnight-horizon`)
-- Aurora Nova (`aurora-nova`)
-- Solstice Veil (`solstice-veil`)
-- Arctic Dawn (`arctic-dawn`)
-- Neon Skyline (`neon-skyline`)
-- Crimson Veil (`crimson-veil`)
-- Violet Horizon (`violet-horizon`)
-- Eclipse Bloom (`eclipse-bloom`)
-- Tideglass (`tideglass`)
-- Nightfall (`nightfall`)
-- Deep Current (`deep-current`)
-- Smokeveil (`smokeveil`)
-- Copper Shadow (`copper-shadow`)
-- Greenflare (`greenflare`)
-- Sage Phantom (`sage-phantom`)
-- Abyssal Floor (`abyssal-floor`)
-- Phantom Arc (`phantom-arc`)
-- Vercel Edge (`vercel-edge-glow`)
-- Citrus Veil (`citrus-veil`)
-- Lilac Steam (`lilac-steam`)
-- Seafoam Drift (`seafoam-drift`)
-- Peach Nectar (`peach-nectar`)
-- Ink Blossom (`ink-blossom`)
-- Honey Linen (`honey-linen`)
-- Frosted Sage (`frosted-sage`)
-- Coral Tide (`coral-tide`)
-- Electric Dawn (`electric-dawn`)
-- Umber Haze (`umber-haze`)
-- Violet Ash (`violet-ash`)
-- Mango Mist (`mango-mist`)
-- Polar Silk (`polar-silk`)
-- Ruby Steam (`ruby-steam`)
-- Pistachio Glow (`pistachio-glow`)
-- Cobalt Veil (`cobalt-veil`)
-- Saffron Dust (`saffron-dust`)
-- Orchid Ice (`orchid-ice`)
-- Ember Nodes (`mesh-ember-nodes`)
-- Glacier Nodes (`mesh-glacier-nodes`)
-- Neon Market (`mesh-neon-market`)
-- Dust Orbs (`mesh-dust-orbs`)
-- Lilac Field (`mesh-lilac-field`)
-- Tropic Pool (`mesh-tropic-pool`)
-- Ink Drops (`mesh-ink-drops`)
-- Amber Lanterns (`mesh-amber-lanterns`)
-- Mint Studio (`mesh-mint-studio`)
-- Rose Quartz Mesh (`mesh-blush-orbs`)
-- Voltage Mesh (`mesh-voltage`)
-- Olive Grove (`mesh-olive-grove`)
-- Arctic Orbs (`mesh-arctic-orbs`)
-- Berry Jam (`mesh-berry-jam`)
-- Steel Bloom (`mesh-steel-bloom`)
-- Crimson Veil (`nebula-crimson-veil`)
-- Ion Storm (`nebula-ion-storm`)
-- Copper Dust (`nebula-copper-dust`)
-- Violet Rift (`nebula-violet-rift`)
-- Emerald Gas (`nebula-emerald-gas`)
-- Rose Nova (`nebula-rose-nova`)
-- Cobalt Abyss (`nebula-cobalt-abyss`)
-- Gold Wake (`nebula-gold-wake`)
-- Mint Corona (`nebula-mint-corona`)
-- Magenta Fold (`nebula-magenta-fold`)
-- Slate Bloom (`nebula-slate-bloom`)
-- Blood Orange Sky (`nebula-blood-orange`)
-- Periwinkle Cloud (`nebula-periwinkle`)
-- Chartreuse Fog (`nebula-chartreuse-fog`)
-- Wine Dark (`nebula-wine-dark`)
-- Solar Cut (`prism-solar-cut`)
-- Arctic Edge (`prism-arctic-edge`)
-- Neon Slash (`prism-neon-slash`)
-- Rose Band (`prism-rose-band`)
-- Violet Knife (`prism-violet-knife`)
-- Forest Refract (`prism-forest-refract`)
-- Amber Split (`prism-amber-split`)
-- Ultraviolet (`prism-ultraviolet`)
-- Chrome Band (`prism-chrome-band`)
-- Candy Cut (`prism-candy-cut`)
-- Ember Grid (`lattice-ember-grid`)
-- Ice Graph (`lattice-ice-graph`)
-- Neon Wire (`lattice-neon-wire`)
-- Olive Plan (`lattice-olive-plan`)
-- Rose Blueprint (`lattice-rose-blueprint`)
-- Midnight CAD (`lattice-midnight-cad`)
-- Sand Mesh (`lattice-sand-mesh`)
-- Mint Draft (`lattice-mint-draft`)
-- Violet Net (`lattice-violet-net`)
-- Gold Frame (`lattice-gold-frame`)
-- Steel Iso (`lattice-steel-iso`)
-- Berry Graph (`lattice-berry-graph`)
-- Sepia Print (`grain-sepia-print`)
-- Cyanotype (`grain-cyanotype`)
-- Rose Film (`grain-rose-film`)
-- Olive Still (`grain-olive-still`)
-- Night Push (`grain-night-push`)
-- Peach Stock (`grain-peach-stock`)
-- Violet Push (`grain-violet-push`)
-- Fog Plate (`grain-fog-plate`)
-- Ember Roll (`grain-ember-roll`)
-- Mint Halide (`grain-mint-halide`)
-- Wine Print (`grain-wine-print`)
-- Sand Exposure (`grain-sand-exposure`)
-- Opal Pane (`glass-opal-pane`)
-- Amber Sheet (`glass-amber-sheet`)
-- Sea Window (`glass-sea-window`)
-- Rose Lens (`glass-rose-lens`)
-- Violet Plate (`glass-violet-plate`)
-- Chartreuse Glass (`glass-chartreuse`)
-- Smoke Glass (`glass-smoke`)
-- Peach Glaze (`glass-peach-glaze`)
-- Cobalt Pane (`glass-cobalt-pane`)
-- Gold Leaf Glass (`glass-gold-leaf`)
-- Mint Gel (`glass-mint-gel`)
-- Magenta Sheet (`glass-magenta-sheet`)
-- Lava Pool (`flux-lava-pool`)
-- Jelly Mint (`flux-jelly-mint`)
-- Plasma Orb (`flux-plasma-orb`)
-- Honey Drip (`flux-honey-drip`)
-- Ink Bloom (`flux-ink-bloom-pool`)
-- Peach Blob (`flux-peach-blob`)
-- Algae Drift (`flux-algae`)
-- Violet Jelly (`flux-violet-jelly`)
-- Copper Melt (`flux-copper-melt`)
-- Arctic Blob (`flux-arctic-blob`)
-- Berry Oil (`flux-berry-oil`)
-- Steel Mercury (`flux-steel-mercury`)
-- Lava Lamp (`flux-lava-lamp`)
-- Jellyfish (`flux-jellyfish`)
-- Oil Spill (`flux-oil-spill`)
-- Graphite Flow (`flux-graphite`)
-- Nebula Flow (`flux-nebula-flow`)
-- Liquid Metal (`flux-liquid-metal`)
-- Toxic Mist (`flux-toxic-mist`)
-- Velvet Liquid (`flux-velvet-liquid`)
-- Aurora Fluid (`flux-aurora-fluid`)
-- Ink Bloom (`flux-ink-bloom`)
-- Cosmic Jelly (`flux-cosmic-jelly`)
-- Volcanic Glass (`flux-volcanic-glass`)
-- Deep Tide (`flux-deep-tide`)
-- Electric Pulp (`flux-electric-pulp`)
-- Neon Plasma (`flux-neon-plasma`)
-- Solar Liquid (`flux-solar-liquid`)
-- Boreal Pulse (`flux-boreal-pulse`)
-- Black Cherry (`flux-black-cherry`)
-- Frozen Plasma (`flux-frozen-plasma`)
-- Bubblegum (`flux-bubblegum`)
-- Cloud Nine (`flux-cloud-nine`)
-- Milk Tea (`flux-milk-tea`)
-- Sage Smoke (`flux-sage-smoke`)
-- Arctic Frost (`glass-arctic-frost`)
-- Rose Window (`glass-rose-window`)
-- Ice Sheet (`glass-ice-sheet`)
-- Aqua Bubble (`glass-aqua-bubble`)
-- Champagne Glass (`glass-champagne`)
-- Frosted Mint (`glass-frosted-mint`)
-- Obsidian Glass (`glass-obsidian`)
-- Emerald Lens (`glass-emerald-lens`)
-- Smoked Glass (`glass-smoked`)
-- Starlight Glass (`glass-starlight`)
-- Liquid Cyan (`glass-liquid-cyan`)
-- Boreal Glass (`glass-boreal`)
-- Prism Window (`glass-prism-window`)
-- Violet Smoke (`glass-violet-smoke`)
-- Amber Crystal (`glass-amber-crystal`)
-- Carbon Glass (`glass-carbon`)
-- Deep Sea Glass (`glass-deep-sea`)
-- Neon Refraction (`glass-neon-refraction`)
-- Moonstone (`glass-moonstone`)
-- Rain Window (`glass-rain-window`)
-- Solar Glass (`glass-solar`)
-- Midnight Film (`grain-midnight-film`)
-- Warm Velvet (`grain-warm-velvet`)
-- Forest Mist (`grain-forest-mist`)
-- Cosmic Ash (`grain-cosmic-ash`)
-- Obsidian (`grain-obsidian`)
-- Ocean Depth (`grain-ocean-depth`)
-- Moss (`grain-moss`)
-- Smoked Lilac (`grain-smoked-lilac`)
-- Olive Film (`grain-olive-film`)
-- Carbon Blue (`grain-carbon-blue`)
-- Rainforest (`grain-rainforest`)
-- Burnt Paper (`grain-burnt-paper`)
-- Indigo Haze (`grain-indigo-haze`)
-- Smoke (`grain-smoke`)
-- Copper Patina (`grain-copper-patina`)
-- Lunar Surface (`grain-lunar-surface`)
-- Desert Sand (`grain-desert-sand`)
-- Concrete Grain (`grain-concrete`)
-- Arctic Paper (`grain-arctic-paper`)
-- Terracotta (`grain-terracotta`)
-- Champagne (`grain-champagne`)
-- Dusty Rose (`grain-dusty-rose`)
-- Frosted Slate (`grain-frosted-slate`)
-- Aurora Beams (`aurora-beams`)
-- Neon Grid (`lattice-neon-grid`)
-- Chrome Inferno (`chrome-inferno`)
-- Diamond Storm (`diamond-storm`)
-- Blueprint (`lattice-blueprint`)
-- Diamond Weave (`lattice-diamond-weave`)
-- Dot Matrix (`lattice-dot-matrix`)
-- Mono Grid (`lattice-mono-grid`)
-- Star Grid (`lattice-star-grid`)
-- Hex Flow (`lattice-hex-flow`)
-- Topographic (`lattice-topographic`)
-- Circuit (`lattice-circuit`)
-- Diamond Field (`lattice-diamond-field`)
-- Radar (`lattice-radar`)
-- Microdots (`lattice-microdots`)
-- Wave Grid (`lattice-wave-grid`)
-- Honeycomb (`lattice-honeycomb`)
-- Constellation (`lattice-constellation`)
-- Prism Mesh (`lattice-prism-mesh`)
-- Scanlines (`lattice-scanlines`)
-- Moiré (`lattice-moire`)
-- Celestial Lattice (`lattice-celestial`)
-- Aurora Grid (`lattice-aurora-grid`)
-- Light Weave (`lattice-light-weave`)
-- Soft Mesh (`lattice-soft-mesh`)
-- Ember Dusk (`mesh-ember-dusk`)
-- Lunar Surface (`mesh-lunar-surface`)
-- Aurora Borealis (`mesh-aurora-borealis`)
-- Abyssal Void (`mesh-abyssal-void`)
-- Graphite Mesh (`mesh-graphite`)
-- Deep Ocean (`mesh-deep-ocean`)
-- Celestial Drift (`celestial-drift`)
-- Neon Tokyo (`mesh-neon-tokyo`)
-- Volcanic Glass (`mesh-volcanic-glass`)
-- Pearl Diving (`mesh-pearl-diving`)
-- Nebula Core (`mesh-nebula-core`)
-- Witching Hour (`mesh-witching-hour`)
-- Starlight Canvas (`mesh-starlight-canvas`)
-- Arctic Aurora (`mesh-arctic-aurora`)
-- Bourbon Smoke (`mesh-bourbon-smoke`)
-- Digital Rain (`mesh-digital-rain`)
-- Obsidian Prism (`mesh-obsidian-prism`)
-- Copper Patina (`mesh-copper-patina`)
-- Golden Coast (`mesh-golden-coast`)
-- Sakura Fields (`mesh-sakura`)
-- Citrine Mesh (`mesh-citrine`)
-- Lavender Haze (`mesh-lavender-haze`)
-- Rose Quartz (`mesh-rose-quartz`)
-- Saffron Silk (`mesh-saffron-silk`)
-- Solar Flare (`mesh-solar-flare`)
-- Frosted Jade (`mesh-frosted-jade`)
-- Tropical Punch (`mesh-tropical-punch`)
-- Cotton Candy (`mesh-cotton-candy`)
-- Alpine Meadow (`mesh-alpine-meadow`)
-- Cosmic Dust (`nebula-cosmic-dust`)
-- Blood Aurora (`blood-aurora`)
-- Void Serpent (`void-serpent`)
-- Plasma Storm (`nebula-plasma`)
-- Ashen Nebula (`nebula-ashen`)
-- Quiet Glow (`nebula-quiet-glow`)
-- Moonlit (`nebula-moonlit`)
-- Emberveil (`nebula-emberveil`)
-- Dew (`nebula-dew`)
-- Boreal (`nebula-boreal`)
-- Vercel Core (`vercel-core`)
-- Silk (`nebula-silk`)
-- Aurora Borealis (`aurora-borealis`)
-- Deep Cosmos (`deep-cosmos`)
-- Starlit Abyss (`starlit-abyss`)
-- Stardust Halo (`stardust-halo`)
-- Galactic Bloom (`galactic-bloom`)
-- Orion Drift (`orion-drift`)
-- Golden Dawn (`nebula-golden-dawn`)
-- Arctic Ice (`nebula-arctic-ice`)
-- Witch's Brew (`nebula-witch-brew`)
-- Blood Moon (`nebula-blood-moon`)
-- Cobalt Dream (`nebula-cobalt-dream`)
-- Sunset Orchid (`nebula-sunset-orchid`)
-- Smoke Signal (`nebula-smoke-signal`)
-- Coral Reef (`nebula-coral-reef`)
-- Thunder Storm (`nebula-thunder-storm`)
-- Midnight Rose (`nebula-midnight-rose`)
-- Neon Sludge (`nebula-neon-sludge`)
-- Supernova (`nebula-supernova`)
-- Mint Cloud (`nebula-mint-cloud`)
-- Rose Quartz (`nebula-rose-quartz`)
-- Peach Velvet (`nebula-peach-velvet`)
-- Lavender Fields (`nebula-lavender-fields`)
-- Sand Dunes (`nebula-sand-dunes`)
-- Champagne Bubbles (`nebula-champagne-bubbles`)
-- Tidal Glass (`wave-tidal-glass`)
-- Sunset Ripples (`wave-sunset-ripples`)
-- Ink Current (`wave-ink-current`)
-- Lilac Swell (`wave-lilac-swell`)
-- Olive Tide (`wave-olive-tide`)
-- Rose Lagoon (`wave-rose-lagoon`)
-- Arctic Fetch (`wave-arctic-fetch`)
-- Neon Surf (`wave-neon-surf`)
-- Umber Shore (`wave-umber-shore`)
-- Mint Fetch (`wave-mint-fetch`)
-- Violet Roll (`wave-violet-roll`)
-- Gold Glint (`wave-gold-glint`)
-- Steel Chop (`wave-steel-chop`)
-- Berry Swell (`wave-berry-swell`)
-- Jade Current (`wave-jade-current`)
-- Peach Fetch (`wave-peach-fetch`)
-- Cobalt Roll (`wave-cobalt-roll`)
-- Chartreuse Chop (`wave-chartreuse-chop`)
-- Wine Tide (`wave-wine-tide`)
-- Fog Swell (`wave-fog-swell`)
-- Amber Fetch (`wave-amber-fetch`)
-- Cyan Sheet (`wave-cyan-sheet`)
-- Magenta Chop (`wave-magenta-chop`)
-- Sand Ripple (`wave-sand-ripple`)
-- Indigo Fetch (`wave-indigo-fetch`)
-- Lime Swell (`wave-lime-swell`)
-- Blush Tide (`wave-blush-tide`)
-- Slate Roll (`wave-slate-roll`)
-- Ember Chop (`wave-ember-chop`)
-- Peridot Wave (`wave-peridot`)
-- Orchid Fetch (`wave-orchid-fetch`)
-- Bronze Tide (`wave-bronze-tide`)
-- Ice Sheet (`wave-ice-sheet`)
-- Ruby Swell (`wave-ruby-swell`)
-- Borealis Veil (`aurora-borealis-veil`)
-- Blood Curtain (`aurora-blood-curtain`)
-- Violet Arc (`aurora-violet-arc`)
-- Mint Drape (`aurora-mint-drape`)
-- Gold Veil (`aurora-gold-veil`)
-- Ice Ribbon (`aurora-ice-ribbon`)
-- Magenta Fold (`aurora-magenta-fold`)
-- Jade Sheet (`aurora-jade-sheet`)
-- Copper Arc (`aurora-copper-arc`)
-- Indigo Drape (`aurora-indigo-drape`)
-- Chartreuse Curtain (`aurora-chartreuse`)
-- Rose Arc (`aurora-rose-arc`)
-- Steel Veil (`aurora-steel-veil`)
-- Emerald Fold (`aurora-emerald-fold`)
-- Orchid Sheet (`aurora-orchid-sheet`)
-- Amber Drape (`aurora-amber-drape`)
-- Cyan Ribbon (`aurora-cyan-ribbon`)
-- Wine Curtain (`aurora-wine-curtain`)
-- Peridot Arc (`aurora-peridot-arc`)
-- Lilac Veil (`aurora-lilac-veil`)
-- Ember Fold (`aurora-ember-fold`)
-- Aqua Sheet (`aurora-aqua-sheet`)
-- Fuchsia Drape (`aurora-fuchsia-drape`)
-- Olive Arc (`aurora-olive-arc`)
-- Sapphire Curtain (`aurora-sapphire`)
-- Peach Veil (`aurora-peach-veil`)
-- Teal Ribbon (`aurora-teal-ribbon`)
-- Plum Fold (`aurora-plum-fold`)
-- Lime Sheet (`aurora-lime-sheet`)
-- Bronze Drape (`aurora-bronze-drape`)
-- Icegreen Arc (`aurora-icegreen`)
-- Hot Pink Curtain (`aurora-hot-pink`)
-- Slate Veil (`aurora-slate-veil`)
-- Honey Arc (`aurora-honey-arc`)
-- Quartz Fan (`geo-quartz-fan`)
-- Ember Slice (`geo-ember-slice`)
-- Neon Pie (`geo-neon-pie`)
-- Olive Fan (`geo-olive-fan`)
-- Rose Sector (`geo-rose-sector`)
-- Ice Wedge (`geo-ice-wedge`)
-- Violet Cut (`geo-violet-cut`)
-- Sand Fan (`geo-sand-fan`)
-- Mint Slice (`geo-mint-slice`)
-- Steel Pie (`geo-steel-pie`)
-- Berry Cut (`geo-berry-cut`)
-- Gold Fan (`geo-gold-fan`)
-- Cobalt Wedge (`geo-cobalt-wedge`)
-- Chartreuse Pie (`geo-chartreuse-pie`)
-- Wine Slice (`geo-wine-slice`)
-- Fog Fan (`geo-fog-fan`)
-- Peach Cut (`geo-peach-cut`)
-- Indigo Pie (`geo-indigo-pie`)
-- Lime Wedge (`geo-lime-wedge`)
-- Blush Fan (`geo-blush-fan`)
-- Slate Cut (`geo-slate-cut`)
-- Magenta Pie (`geo-magenta-pie`)
-- Bronze Fan (`geo-bronze-fan`)
-- Aqua Slice (`geo-aqua-slice`)
-- Orchid Wedge (`geo-orchid-wedge`)
-- Umber Pie (`geo-umber-pie`)
-- Icegreen Fan (`geo-icegreen-fan`)
-- Ruby Cut (`geo-ruby-cut`)
-- Chrome Slice (`geo-chrome-slice`)
-- Saffron Fan (`geo-saffron-fan`)
-- Teal Pie (`geo-teal-pie`)
-- Plum Wedge (`geo-plum-wedge`)
-- Sepia Wash (`noise-sepia-wash`)
-- Cyan Static (`noise-cyan-static`)
-- Rose Hiss (`noise-rose-hiss`)
-- Olive Grit (`noise-olive-grit`)
-- Night Snow (`noise-night-snow`)
-- Peach Hiss (`noise-peach-hiss`)
-- Violet Static (`noise-violet-static`)
-- Fog Hiss (`noise-fog-hiss`)
-- Ember Grit (`noise-ember-grit`)
-- Mint Static (`noise-mint-static`)
-- Wine Hiss (`noise-wine-hiss`)
-- Sand Grit (`noise-sand-grit`)
-- Cobalt Static (`noise-cobalt-static`)
-- Chartreuse Noise (`noise-chartreuse`)
-- Blush Hiss (`noise-blush-hiss`)
-- Slate Snow (`noise-slate-snow`)
-- Gold Grit (`noise-gold-grit`)
-- Teal Static (`noise-teal-static`)
-- Magenta Hiss (`noise-magenta-hiss`)
-- Umber Grit (`noise-umber-grit`)
-- Ice Static (`noise-ice-static`)
-- Ruby Hiss (`noise-ruby-hiss`)
-- Chrome Snow (`noise-chrome-snow`)
-- Saffron Grit (`noise-saffron-grit`)
-- Jade Static (`noise-jade-static`)
-- Plum Hiss (`noise-plum-hiss`)
-- Lime Grit (`noise-lime-grit`)
-- Bronze Hiss (`noise-bronze-hiss`)
-- Sky Static (`noise-sky-static`)
-- Berry Grit (`noise-berry-grit`)
-- Paper Hiss (`noise-paper-hiss`)
-- Ink Snow (`noise-ink-snow`)
-- Solar Core (`halo-solar-core`)
-- Ice Ring (`halo-ice-ring`)
-- Neon Orbit (`halo-neon-orbit`)
-- Rose Corona (`halo-rose-corona`)
-- Violet Ring (`halo-violet-ring`)
-- Gold Orbit (`halo-gold-orbit`)
-- Mint Corona (`halo-mint-corona`)
-- Ember Ring (`halo-ember-ring`)
-- Cyan Orbit (`halo-cyan-orbit`)
-- Magenta Core (`halo-magenta-core`)
-- Steel Ring (`halo-steel-ring`)
-- Chartreuse Halo (`halo-chartreuse`)
-- Wine Corona (`halo-wine-corona`)
-- Fog Ring (`halo-fog-ring`)
-- Peach Orbit (`halo-peach-orbit`)
-- Indigo Core (`halo-indigo-core`)
-- Lime Ring (`halo-lime-ring`)
-- Blush Corona (`halo-blush-corona`)
-- Slate Orbit (`halo-slate-orbit`)
-- Amber Core (`halo-amber-core`)
-- Teal Ring (`halo-teal-ring`)
-- Orchid Orbit (`halo-orchid-orbit`)
-- Umber Corona (`halo-umber-corona`)
-- Icegreen Halo (`halo-icegreen`)
-- Ruby Ring (`halo-ruby-ring`)
-- Chrome Core (`halo-chrome-core`)
-- Saffron Orbit (`halo-saffron-orbit`)
-- Jade Corona (`halo-jade-corona`)
-- Plum Ring (`halo-plum-ring`)
-- Bronze Core (`halo-bronze-core`)
-- Sky Orbit (`halo-sky-orbit`)
-- Berry Corona (`halo-berry-corona`)
-- Paper Ring (`halo-paper-ring`)
-- Plasma Core (`halo-plasma-core`)
-- Ember Line (`dusk-ember-line`)
-- Lilac Band (`dusk-lilac-band`)
-- Gold Cut (`dusk-gold-cut`)
-- Mint Line (`dusk-mint-line`)
-- Rose Band (`dusk-rose-band`)
-- Cyan Cut (`dusk-cyan-cut`)
-- Violet Line (`dusk-violet-line`)
-- Olive Band (`dusk-olive-band`)
-- Peach Cut (`dusk-peach-cut`)
-- Steel Line (`dusk-steel-line`)
-- Berry Band (`dusk-berry-band`)
-- Amber Cut (`dusk-amber-cut`)
-- Cobalt Line (`dusk-cobalt-line`)
-- Chartreuse Band (`dusk-chartreuse`)
-- Wine Cut (`dusk-wine-cut`)
-- Fog Line (`dusk-fog-line`)
-- Saffron Band (`dusk-saffron-band`)
-- Teal Cut (`dusk-teal-cut`)
-- Magenta Line (`dusk-magenta-line`)
-- Umber Band (`dusk-umber-band`)
-- Ice Cut (`dusk-ice-cut`)
-- Ruby Line (`dusk-ruby-line`)
-- Chrome Band (`dusk-chrome-band`)
-- Honey Cut (`dusk-honey-cut`)
-- Jade Line (`dusk-jade-line`)
-- Plum Band (`dusk-plum-band`)
-- Lime Cut (`dusk-lime-cut`)
-- Bronze Line (`dusk-bronze-line`)
-- Sky Band (`dusk-sky-band`)
-- Berry Cut (`dusk-berry-cut`)
-- Paper Line (`dusk-paper-line`)
-- Plasma Band (`dusk-plasma-band`)
-- Sand Cut (`dusk-sand-cut`)
-- Indigo Line (`dusk-indigo-line`)
-- Glasswave (`prism-glasswave`)
-- Spectral Edge (`prism-spectral-edge`)
-- Refract (`prism-refract`)
-- Polaris (`prism-polaris`)
-- Splitlight (`prism-splitlight`)
-- Neon Ring (`prism-neon-ring`)
-- Aether (`prism-aether`)
-- Diamond (`prism-diamond`)
-- Aurora Glass (`prism-aurora-glass`)
-- Dark Spectrum (`prism-dark-spectrum`)
-- Steel Spectrum (`prism-steel-spectrum`)
-- Borealis Shard (`prism-borealis-shard`)
-- Iris Halo (`prism-iris-halo`)
-- Rainbow Flare (`prism-rainbow-flare`)
-- Crystal Edge (`prism-crystal-edge`)
-- Solar Flare (`prism-solar-flare`)
+Categories: aura, mesh, nebula, prism, lattice, grain, glass, flux, aurora, noise, halo, dusk
+
+- Sunrise Drift (`sunrise-drift`) — aura: Blue into orange, high key
+- Ember Glow (`ember-glow`) — aura: Coral into deep rose
+- Glacier Mist (`glacier-mist`) — aura: Cyan into indigo
+- Orchid Bloom (`orchid-bloom`) — aura: Magenta into blue
+- Warm Ash (`warm-ash`) — aura: Warm greige tones, understated and airy
+- Golden Hour (`golden-hour`) — aura: Amber melting into burnt sienna
+- Rose Gold (`rose-gold`) — aura: Blush pink dissolving into antique copper
+- Sunset Boulevard (`sunset-boulevard`) — aura: Coral haze fading into honeyed amber
+- Champagne Fizz (`champagne-fizz`) — aura: Pale gold bubbling into peach nectar
+- Midnight Sapphire (`midnight-sapphire`) — aura: Deep cobalt bleeding into violet ink
+- Ocean Pearl (`ocean-pearl`) — aura: Seafoam drifting into abyssal blue
+- Arctic Frost (`arctic-frost`) — aura: Ice crystal refracting into periwinkle
+- Silver Mist (`silver-mist`) — aura: Mercury grey dissolving into pale lilac
+- Deep Lagoon (`deep-lagoon`) — aura: Teal into violet
+- Eclipse Flare (`eclipse-flare`) — aura: Dark void curving into blue, magenta, and ember
+- Midnight Horizon (`midnight-horizon`) — aura: A vibrant transition from deep space blue to an electric sunrise horizon
+- Aurora Nova (`aurora-nova`) — aura: A vibrant transition from deep cosmic violet to an electric neon sunrise
+- Solstice Veil (`solstice-veil`) — aura: Amber horizon dissolving into rose-violet dusk
+- Arctic Dawn (`arctic-dawn`) — aura: Frozen cyan horizon melting into pale rose
+- Neon Skyline (`neon-skyline`) — aura: Electric cyan horizon bleeding into neon magenta
+- Crimson Veil (`crimson-veil`) — aura: Deep crimson horizon melting into amber gold
+- Violet Horizon (`violet-horizon`) — aura: Indigo horizon opening into lavender and rose
+- Eclipse Bloom (`eclipse-bloom`) — aura: A dim cyan bloom emerging from behind a dark eclipse
+- Tideglass (`tideglass`) — aura: A translucent cyan tide bending across deep black
+- Nightfall (`nightfall`) — aura: Cold blue atmosphere descending from the upper edge
+- Deep Current (`deep-current`) — aura: A submerged current moving horizontally through darkness
+- Smokeveil (`smokeveil`) — aura: A translucent veil of blue-green smoke crossing the frame
+- Copper Shadow (`copper-shadow`) — aura: Muted copper light slipping beneath a black veil
+- Greenflare (`greenflare`) — aura: A concentrated emerald flare dissolving into black
+- Sage Phantom (`sage-phantom`) — aura: Asymmetrical soft sage glow emerging from the bottom right
+- Abyssal Floor (`abyssal-floor`) — aura: Deep cyan glow rising exclusively from the absolute black floor
+- Phantom Arc (`phantom-arc`) — aura: Deep black void with an expansive electric blue neon arc and an ultra-thin sand rose bottom edge
+- Vercel Edge (`vercel-edge-glow`) — aura: Deep tech aesthetic with a stark silver-white arc fading into a sharp cyberpunk violet edge
+- Ember Dusk (`mesh-ember-dusk`) — mesh: Last embers of sunset smoldering behind charcoal hills
+- Lunar Surface (`mesh-lunar-surface`) — mesh: Moon dust catching earthshine in silent craters
+- Aurora Borealis (`mesh-aurora-borealis`) — mesh: Northern lights mesh with emerald and violet nodes
+- Abyssal Void (`mesh-abyssal-void`) — mesh: Crushing darkness pierced by bioluminescent anglerfish glow
+- Graphite Mesh (`mesh-graphite`) — mesh: Monochrome graphite mesh with cool steel nodes
+- Deep Ocean (`mesh-deep-ocean`) — mesh: Abyssal blue mesh with bioluminescent nodes
+- Celestial Drift (`celestial-drift`) — mesh: Pastel cosmic mesh with lavender and mint nodes under faint stars
+- Neon Tokyo (`mesh-neon-tokyo`) — mesh: Cyberpunk city lights bleeding through rain-slicked streets
+- Volcanic Glass (`mesh-volcanic-glass`) — mesh: Molten obsidian cooling into prismatic fractures
+- Pearl Diving (`mesh-pearl-diving`) — mesh: Iridescent mother-of-pearl shimmering in abyssal depths
+- Nebula Core (`mesh-nebula-core`) — mesh: Stellar nursery birthing new stars in chromatic gas clouds
+- Witching Hour (`mesh-witching-hour`) — mesh: Midnight ritual glow with emerald smoke and violet embers
+- Starlight Canvas (`mesh-starlight-canvas`) — mesh: Painter's palette dipped in galaxy dust and constellation ink
+- Arctic Aurora (`mesh-arctic-aurora`) — mesh: Polar light curtains dancing across frozen tundra
+- Bourbon Smoke (`mesh-bourbon-smoke`) — mesh: Amber liquid light refracting through oak-aged haze
+- Digital Rain (`mesh-digital-rain`) — mesh: Matrix code dissolving into phosphor green pools
+- Obsidian Prism (`mesh-obsidian-prism`) — mesh: Black volcanic glass fracturing light into hidden spectra
+- Copper Patina (`mesh-copper-patina`) — mesh: Oxidized bronze catching verdigris and rust in equal measure
+- Golden Coast (`mesh-golden-coast`) — mesh: Sunset beach mesh with amber and coral nodes
+- Sakura Fields (`mesh-sakura`) — mesh: Cherry blossom pink mesh with warm peach nodes
+- Citrine Mesh (`mesh-citrine`) — mesh: Sunlit yellow-gold mesh with amber nodes
+- Lavender Haze (`mesh-lavender-haze`) — mesh: Soft purple mesh with lilac and mauve nodes
+- Rose Quartz (`mesh-rose-quartz`) — mesh: Crystalline pink formations catching dawn light
+- Saffron Silk (`mesh-saffron-silk`) — mesh: Spice market warmth woven through golden fabric folds
+- Solar Flare (`mesh-solar-flare`) — mesh: Coronal mass ejection captured in frozen light
+- Frosted Jade (`mesh-frosted-jade`) — mesh: Ancient jade carved from glacier ice and mountain mist
+- Tropical Punch (`mesh-tropical-punch`) — mesh: Mango and dragon fruit colliding in a blender of light
+- Cotton Candy (`mesh-cotton-candy`) — mesh: Sugar-spun clouds dissolving in pastel twilight
+- Alpine Meadow (`mesh-alpine-meadow`) — mesh: Wildflower blooms scattered across high altitude pastures
+- Cosmic Dust (`nebula-cosmic-dust`) — nebula: Floating violet and cyan orbs in deep space
+- Blood Aurora (`blood-aurora`) — nebula: Crimson and gold aurora curtains burning across an absolute night sky
+- Sky Aurora (`sky-aurora`) — nebula: Cyan and cloud-white aurora curtains drifting across a midnight sky
+- Void Serpent (`void-serpent`) — nebula: Poisonous green and violet curtains coiling through an absolute void
+- Plasma Storm (`nebula-plasma`) — nebula: Electric purple and blue plasma blobs
+- Ashen Nebula (`nebula-ashen`) — nebula: Dim charcoal orbs drifting through a gray void
+- Quiet Glow (`nebula-quiet-glow`) — nebula: A single soft cyan presence floating in darkness
+- Moonlit (`nebula-moonlit`) — nebula: A pale blue glow fading into a midnight void
+- Emberveil (`nebula-emberveil`) — nebula: A muted ember drifting behind a dark veil
+- Dew (`nebula-dew`) — nebula: Tiny turquoise atmosphere suspended in deep black
+- Boreal (`nebula-boreal`) — nebula: A restrained northern green haze in a black void
+- Vercel Core (`vercel-core`) — nebula: A stark monochromatic Vercel beam fracturing into a deep cloud indigo ambient glow
+- Silk (`nebula-silk`) — nebula: A thin atmospheric ribbon softly crossing the void
+- Aurora Borealis (`aurora-borealis`) — nebula: Layered emerald and cyan aurora curtains drifting across a midnight sky
+- Deep Cosmos (`deep-cosmos`) — nebula: Deep purple abyss with stellar glows and distant twinkling stars
+- Starlit Abyss (`starlit-abyss`) — nebula: Indigo void with a distant glow and scattered stars
+- Stardust Halo (`stardust-halo`) — nebula: Magenta halo glowing through a field of distant stars
+- Galactic Bloom (`galactic-bloom`) — nebula: Teal and magenta nebula clouds drifting through stellar dust
+- Orion Drift (`orion-drift`) — nebula: Cold blue-white glow beneath a dense star field
+- Golden Dawn (`nebula-golden-dawn`) — nebula: Solar flares condensing into molten gold spheres
+- Arctic Ice (`nebula-arctic-ice`) — nebula: Frozen nitrogen crystals orbiting a distant white dwarf
+- Witch's Brew (`nebula-witch-brew`) — nebula: Toxic green bubbles rising from a cauldron of stars
+- Blood Moon (`nebula-blood-moon`) — nebula: Crimson lunar eclipses casting long shadows through dust
+- Cobalt Dream (`nebula-cobalt-dream`) — nebula: Deep blue orbs suspended in midnight ink
+- Sunset Orchid (`nebula-sunset-orchid`) — nebula: Purple and tangerine orbs colliding at the horizon
+- Smoke Signal (`nebula-smoke-signal`) — nebula: Gray smoke rings drifting from an extinguished star
+- Coral Reef (`nebula-coral-reef`) — nebula: Living coral polyps glowing in abyssal currents
+- Thunder Storm (`nebula-thunder-storm`) — nebula: Electric violet thunderheads rolling through void
+- Midnight Rose (`nebula-midnight-rose`) — nebula: Deep burgundy petals unfurling in eternal darkness
+- Neon Sludge (`nebula-neon-sludge`) — nebula: Toxic waste orbs glowing with unnatural intensity
+- Supernova (`nebula-supernova`) — nebula: Explosive amber and crimson orbs
+- Mint Cloud (`nebula-mint-cloud`) — nebula: Ethereal teal and emerald floating spheres
+- Rose Quartz (`nebula-rose-quartz`) — nebula: Delicate pink and blush floating orbs
+- Peach Velvet (`nebula-peach-velvet`) — nebula: Soft peach fuzz orbs floating in cream
+- Lavender Fields (`nebula-lavender-fields`) — nebula: Soft violet spheres blooming in twilight
+- Sand Dunes (`nebula-sand-dunes`) — nebula: Desert mirages of heated air bending starlight
+- Champagne Bubbles (`nebula-champagne-bubbles`) — nebula: Effervescent gold spheres rising through crystal
+- Glasswave (`prism-glasswave`) — prism: Thin spectral waves refracting through translucent glass
+- Spectral Edge (`prism-spectral-edge`) — prism: A concentrated rainbow refraction emerging from one edge
+- Refract (`prism-refract`) — prism: Diagonal spectral refraction split across a dark surface
+- Polaris (`prism-polaris`) — prism: Cold cyan and violet spectrum orbiting a dark center
+- Splitlight (`prism-splitlight`) — prism: A clean beam splitting into spectral colors
+- Neon Ring (`prism-neon-ring`) — prism: Thin spectral ring glowing around a deep central void
+- Aether (`prism-aether`) — prism: Weightless cyan-violet iridescence floating through darkness
+- Diamond (`prism-diamond`) — prism: Sharp spectral light refracted through an invisible crystal
+- Aurora Glass (`prism-aurora-glass`) — prism: Boreal cyan, emerald and violet refracted through translucent glass
+- Dark Spectrum (`prism-dark-spectrum`) — prism: Neon prismatic halo on dark void
+- Steel Spectrum (`prism-steel-spectrum`) — prism: Muted steel-blue conic burst, quiet and industrial
+- Borealis Shard (`prism-borealis-shard`) — prism: Conic fragment with aurora tones crossing deep space
+- Iris Halo (`prism-iris-halo`) — prism: Soft iridescent ring with a luminous spectral center
+- Rainbow Flare (`prism-rainbow-flare`) — prism: Full spectrum conic burst
+- Crystal Edge (`prism-crystal-edge`) — prism: Angular prism refraction with blue-violet
+- Solar Flare (`prism-solar-flare`) — prism: Warm conic burst from golden core
+- Aurora Beams (`aurora-beams`) — lattice: Diagonal repeating light beams heavily blurred with a teal base glow
+- Neon Grid (`lattice-neon-grid`) — lattice: Cyberpunk grid with neon purple glow lines
+- Chrome Inferno (`chrome-inferno`) — lattice: Incandescent metallic beams cutting through total darkness
+- Diamond Storm (`diamond-storm`) — lattice: Electric ice beams cutting through a glacial void
+- Blueprint (`lattice-blueprint`) — lattice: Technical blueprint grid with cyan highlights
+- Diamond Weave (`lattice-diamond-weave`) — lattice: Diagonal crosshatch with golden glow
+- Dot Matrix (`lattice-dot-matrix`) — lattice: Retro dot pattern with violet gradient wash
+- Mono Grid (`lattice-mono-grid`) — lattice: Minimal grayscale grid with soft steel glow
+- Star Grid (`lattice-star-grid`) — lattice: Fine grid over deep marine blue, speckled with bright dots
+- Hex Flow (`lattice-hex-flow`) — lattice: Soft hexagonal lattice dissolving into cyan atmospheric light
+- Topographic (`lattice-topographic`) — lattice: Layered contour lines flowing like a luminous terrain map
+- Circuit (`lattice-circuit`) — lattice: Minimal electronic traces illuminated by electric blue
+- Diamond Field (`lattice-diamond-field`) — lattice: Fine diamond lattice floating over a violet atmospheric field
+- Radar (`lattice-radar`) — lattice: Concentric scanning rings with a subtle electromagnetic glow
+- Microdots (`lattice-microdots`) — lattice: Ultra-fine dot matrix fading into a soft blue atmosphere
+- Wave Grid (`lattice-wave-grid`) — lattice: Curved interference lines creating a fluid geometric surface
+- Honeycomb (`lattice-honeycomb`) — lattice: Hexagonal amber structure with a restrained golden glow
+- Constellation (`lattice-constellation`) — lattice: Sparse geometric network connecting luminous points
+- Prism Mesh (`lattice-prism-mesh`) — lattice: Angular mesh illuminated by cyan, violet and magenta refractions
+- Scanlines (`lattice-scanlines`) — lattice: Fine horizontal scanlines over a subtle cybernetic glow
+- Moiré (`lattice-moire`) — lattice: Overlapping fine waves producing a hypnotic moiré surface
+- Celestial Lattice (`lattice-celestial`) — lattice: Fine celestial geometry fading into a deep cosmic blue
+- Aurora Grid (`lattice-aurora-grid`) — lattice: Fine geometric grid submerged beneath an emerald and cyan aurora
+- Light Weave (`lattice-light-weave`) — lattice: Delicate grid on soft blue with subtle glow
+- Soft Mesh (`lattice-soft-mesh`) — lattice: Minimal pale mesh dissolving into an airy cyan atmosphere
+- Midnight Film (`grain-midnight-film`) — grain: Deep indigo with analog film grain
+- Warm Velvet (`grain-warm-velvet`) — grain: Rich burgundy with soft texture
+- Forest Mist (`grain-forest-mist`) — grain: Emerald depth with organic noise
+- Cosmic Ash (`grain-cosmic-ash`) — grain: Charcoal and indigo grain over a subtle violet undertone
+- Obsidian (`grain-obsidian`) — grain: Black volcanic depth with subtle graphite texture
+- Ocean Depth (`grain-ocean-depth`) — grain: Deep marine blue with soft underwater illumination
+- Moss (`grain-moss`) — grain: Muted moss green with earthy photographic texture
+- Smoked Lilac (`grain-smoked-lilac`) — grain: Dusty violet softened by a smoky analog texture
+- Olive Film (`grain-olive-film`) — grain: Muted olive tones inspired by vintage photography
+- Carbon Blue (`grain-carbon-blue`) — grain: Charcoal black transitioning into restrained cobalt blue
+- Rainforest (`grain-rainforest`) — grain: Dense tropical green with humid atmospheric texture
+- Burnt Paper (`grain-burnt-paper`) — grain: Aged parchment fading into warm charcoal
+- Indigo Haze (`grain-indigo-haze`) — grain: Soft midnight indigo with a hazy luminous center
+- Smoke (`grain-smoke`) — grain: Neutral graphite gradient with dense atmospheric grain
+- Copper Patina (`grain-copper-patina`) — grain: Aged copper transitioning into muted turquoise patina
+- Lunar Surface (`grain-lunar-surface`) — grain: Cold lunar gray with subtle mineral depth
+- Desert Sand (`grain-desert-sand`) — grain: Warm beige with gritty film texture
+- Concrete Grain (`grain-concrete`) — grain: Cool concrete gray with fine analog texture
+- Arctic Paper (`grain-arctic-paper`) — grain: Cold white surface with a delicate icy texture
+- Terracotta (`grain-terracotta`) — grain: Burnt clay with warm tactile grain
+- Champagne (`grain-champagne`) — grain: Soft champagne surface with understated luxury texture
+- Dusty Rose (`grain-dusty-rose`) — grain: Muted rose gradient with soft vintage film character
+- Frosted Slate (`grain-frosted-slate`) — grain: Desaturated blue-gray with soft frosted texture
+- Arctic Frost (`glass-arctic-frost`) — glass: Frosted glass with blue-cyan refraction
+- Rose Window (`glass-rose-window`) — glass: Stained glass with rose and amber refractions
+- Ice Sheet (`glass-ice-sheet`) — glass: Layered translucent ice with frozen cyan fractures
+- Aqua Bubble (`glass-aqua-bubble`) — glass: Soft translucent bubbles suspended in an aquatic glass surface
+- Champagne Glass (`glass-champagne`) — glass: Soft golden translucent glass with luxurious highlights
+- Frosted Mint (`glass-frosted-mint`) — glass: Pale mint glass with a soft frozen atmospheric glow
+- Obsidian Glass (`glass-obsidian`) — glass: Dark frosted glass with violet refractions
+- Emerald Lens (`glass-emerald-lens`) — glass: Green frosted glass with teal light beams
+- Smoked Glass (`glass-smoked`) — glass: Dark smoked glass with graphite refractions
+- Starlight Glass (`glass-starlight`) — glass: Dark frosted blue-violet glass with embedded starlight
+- Liquid Cyan (`glass-liquid-cyan`) — glass: Translucent cyan glass flowing like liquid crystal
+- Boreal Glass (`glass-boreal`) — glass: Frosted glass infused with emerald and cyan northern light
+- Prism Window (`glass-prism-window`) — glass: Transparent glass scattering subtle rainbow refractions
+- Violet Smoke (`glass-violet-smoke`) — glass: Dark translucent violet glass surrounded by soft atmospheric haze
+- Amber Crystal (`glass-amber-crystal`) — glass: Warm translucent crystal with golden internal reflections
+- Carbon Glass (`glass-carbon`) — glass: Nearly black glass with restrained graphite reflections
+- Deep Sea Glass (`glass-deep-sea`) — glass: Dense blue-green glass with submerged light refractions
+- Neon Refraction (`glass-neon-refraction`) — glass: Dark frosted glass splitting cyan, violet and pink neon light
+- Moonstone (`glass-moonstone`) — glass: Smoky blue glass with a faint lunar iridescence
+- Rain Window (`glass-rain-window`) — glass: Condensed blue glass with soft distorted light behind it
+- Solar Glass (`glass-solar`) — glass: Warm transparent glass glowing from an internal amber core
+- Lava Lamp (`flux-lava-lamp`) — flux: Organic red and orange blobs floating in dark space
+- Jellyfish (`flux-jellyfish`) — flux: Translucent cyan and violet organic shapes
+- Oil Spill (`flux-oil-spill`) — flux: Iridescent dark blobs with rainbow reflections
+- Graphite Flow (`flux-graphite`) — flux: Slow graphite and slate blobs in dark space
+- Nebula Flow (`flux-nebula-flow`) — flux: Organic magenta, teal and violet blobs drifting like nebula clouds
+- Liquid Metal (`flux-liquid-metal`) — flux: Molten silver forms flowing through a dark metallic void
+- Toxic Mist (`flux-toxic-mist`) — flux: Acid green and electric cyan vapor twisting through darkness
+- Velvet Liquid (`flux-velvet-liquid`) — flux: Deep burgundy and plum shapes melting into one another
+- Aurora Fluid (`flux-aurora-fluid`) — flux: Liquid emerald and cyan forms inspired by northern lights
+- Ink Bloom (`flux-ink-bloom`) — flux: Pigment-like blue and violet ink blooming through water
+- Cosmic Jelly (`flux-cosmic-jelly`) — flux: Translucent magenta and cyan masses floating like alien jelly
+- Volcanic Glass (`flux-volcanic-glass`) — flux: Molten amber shapes trapped inside black volcanic glass
+- Deep Tide (`flux-deep-tide`) — flux: Slow-moving blue and teal masses inspired by deep ocean currents
+- Electric Pulp (`flux-electric-pulp`) — flux: High-energy lime, violet and cyan organic masses
+- Neon Plasma (`flux-neon-plasma`) — flux: Electric blue and hot pink plasma colliding in organic forms
+- Solar Liquid (`flux-solar-liquid`) — flux: Golden and coral liquid forms glowing like a molten sun
+- Boreal Pulse (`flux-boreal-pulse`) — flux: Emerald, cyan and violet organic masses with a northern glow
+- Black Cherry (`flux-black-cherry`) — flux: Dark cherry and crimson organic masses with a glossy depth
+- Frozen Plasma (`flux-frozen-plasma`) — flux: Icy blue organic masses glowing inside a frozen void
+- Bubblegum (`flux-bubblegum`) — flux: Playful pink, purple and mint blob composition
+- Cloud Nine (`flux-cloud-nine`) — flux: Soft peach and cream organic cloudscape
+- Milk Tea (`flux-milk-tea`) — flux: Creamy caramel and beige organic forms with a soft tactile feel
+- Sage Smoke (`flux-sage-smoke`) — flux: Muted sage and eucalyptus shapes drifting through pale air
+- Citrus Veil (`citrus-veil`) — aura: Lemon haze into tangerine silk
+- Lilac Steam (`lilac-steam`) — aura: Powder lilac dissolving into iris
+- Seafoam Drift (`seafoam-drift`) — aura: Mint foam over pale aqua
+- Peach Nectar (`peach-nectar`) — aura: Soft peach melting into apricot
+- Ink Blossom (`ink-blossom`) — aura: Indigo wash with magenta bloom
+- Honey Linen (`honey-linen`) — aura: Warm linen stained with honey
+- Frosted Sage (`frosted-sage`) — aura: Cool sage dissolving into mist
+- Coral Tide (`coral-tide`) — aura: Living coral into rose quartz
+- Electric Dawn (`electric-dawn`) — aura: Cyan spark into hot magenta
+- Umber Haze (`umber-haze`) — aura: Quiet umber into toasted clay
+- Violet Ash (`violet-ash`) — aura: Muted violet on cool grey
+- Mango Mist (`mango-mist`) — aura: Ripe mango fading into cream
+- Polar Silk (`polar-silk`) — aura: Ice blue silk over white
+- Ruby Steam (`ruby-steam`) — aura: Ruby vapor into pale blush
+- Pistachio Glow (`pistachio-glow`) — aura: Soft pistachio into chartreuse
+- Cobalt Veil (`cobalt-veil`) — aura: Cobalt wash into porcelain
+- Saffron Dust (`saffron-dust`) — aura: Saffron powder over cream paper
+- Orchid Ice (`orchid-ice`) — aura: Frozen orchid into pale blue
+- Ember Nodes (`mesh-ember-nodes`) — mesh: Warm nodes hovering over ash
+- Glacier Nodes (`mesh-glacier-nodes`) — mesh: Icy orbs drifting on pale ice
+- Neon Market (`mesh-neon-market`) — mesh: Night-market neons overlapping
+- Dust Orbs (`mesh-dust-orbs`) — mesh: Muted clay orbs in warm light
+- Lilac Field (`mesh-lilac-field`) — mesh: Soft lilac blobs in fog
+- Tropic Pool (`mesh-tropic-pool`) — mesh: Lagoon greens and aqua beads
+- Ink Drops (`mesh-ink-drops`) — mesh: Deep ink droplets on black paper
+- Amber Lanterns (`mesh-amber-lanterns`) — mesh: Paper lanterns in dusk air
+- Mint Studio (`mesh-mint-studio`) — mesh: Studio mint orbs on linen
+- Rose Quartz Mesh (`mesh-blush-orbs`) — mesh: Blush stones floating in milk
+- Voltage Mesh (`mesh-voltage`) — mesh: Electric cyan colliding with violet
+- Olive Grove (`mesh-olive-grove`) — mesh: Olive orbs in late sun
+- Arctic Orbs (`mesh-arctic-orbs`) — mesh: Pale arctic lights on snow
+- Berry Jam (`mesh-berry-jam`) — mesh: Crushed berry orbs in cream
+- Steel Bloom (`mesh-steel-bloom`) — mesh: Cool steel with a blue bloom
+- Crimson Veil (`nebula-crimson-veil`) — nebula: Deep crimson clouds in void
+- Ion Storm (`nebula-ion-storm`) — nebula: Electric teal storm in space
+- Copper Dust (`nebula-copper-dust`) — nebula: Copper nebula over warm black
+- Violet Rift (`nebula-violet-rift`) — nebula: A violet rift tearing the dark
+- Emerald Gas (`nebula-emerald-gas`) — nebula: Emerald gas clouds, slow drift
+- Rose Nova (`nebula-rose-nova`) — nebula: A rose-colored nova remnant
+- Cobalt Abyss (`nebula-cobalt-abyss`) — nebula: Cobalt depths with cyan sparks
+- Gold Wake (`nebula-gold-wake`) — nebula: Golden wake through dark dust
+- Mint Corona (`nebula-mint-corona`) — nebula: Mint corona around a dark core
+- Magenta Fold (`nebula-magenta-fold`) — nebula: Folded magenta gas sheets
+- Slate Bloom (`nebula-slate-bloom`) — nebula: Cool slate with a blue bloom
+- Blood Orange Sky (`nebula-blood-orange`) — nebula: Blood-orange clouds at night
+- Periwinkle Cloud (`nebula-periwinkle`) — nebula: Soft periwinkle in deep space
+- Chartreuse Fog (`nebula-chartreuse-fog`) — nebula: Toxic chartreuse fog bank
+- Wine Dark (`nebula-wine-dark`) — nebula: Homeric wine-dark nebula
+- Solar Cut (`prism-solar-cut`) — prism: A hard solar spectrum slash
+- Arctic Edge (`prism-arctic-edge`) — prism: Icy spectral edge in pale light
+- Neon Slash (`prism-neon-slash`) — prism: Neon spectrum on black glass
+- Rose Band (`prism-rose-band`) — prism: A rose-to-gold spectral band
+- Violet Knife (`prism-violet-knife`) — prism: Violet to cyan cutting angle
+- Forest Refract (`prism-forest-refract`) — prism: Green spectrum through canopy
+- Amber Split (`prism-amber-split`) — prism: Amber splitting into peach
+- Ultraviolet (`prism-ultraviolet`) — prism: UV-leaning spectral smear
+- Chrome Band (`prism-chrome-band`) — prism: Cool chrome spectral stripe
+- Candy Cut (`prism-candy-cut`) — prism: Candy-colored hard refraction
+- Ember Grid (`lattice-ember-grid`) — lattice: Warm grid over ember glow
+- Ice Graph (`lattice-ice-graph`) — lattice: Fine ice graph on pale cyan
+- Neon Wire (`lattice-neon-wire`) — lattice: Neon wireframe in the dark
+- Olive Plan (`lattice-olive-plan`) — lattice: Architectural olive mesh
+- Rose Blueprint (`lattice-rose-blueprint`) — lattice: Blush blueprint lattice
+- Midnight CAD (`lattice-midnight-cad`) — lattice: CAD grid on midnight ink
+- Sand Mesh (`lattice-sand-mesh`) — lattice: Desert sand graph paper
+- Mint Draft (`lattice-mint-draft`) — lattice: Mint drafting overlay
+- Violet Net (`lattice-violet-net`) — lattice: Soft violet netting
+- Gold Frame (`lattice-gold-frame`) — lattice: Gilded frame over cream
+- Steel Iso (`lattice-steel-iso`) — lattice: Isometric steel construction
+- Berry Graph (`lattice-berry-graph`) — lattice: Berry-ink graph paper
+- Sepia Print (`grain-sepia-print`) — grain: Sepia wash with analog grain
+- Cyanotype (`grain-cyanotype`) — grain: Classic cyanotype grain
+- Rose Film (`grain-rose-film`) — grain: Expired rose film stock
+- Olive Still (`grain-olive-still`) — grain: Olive still from a dusty reel
+- Night Push (`grain-night-push`) — grain: Pushed night film, blue grain
+- Peach Stock (`grain-peach-stock`) — grain: Peach daylight film
+- Violet Push (`grain-violet-push`) — grain: Violet-shifted push process
+- Fog Plate (`grain-fog-plate`) — grain: Fogged glass plate, cool grain
+- Ember Roll (`grain-ember-roll`) — grain: Ember-toned cinema roll
+- Mint Halide (`grain-mint-halide`) — grain: Mint silver halide wash
+- Wine Print (`grain-wine-print`) — grain: Wine-dark print with grit
+- Sand Exposure (`grain-sand-exposure`) — grain: Overexposed sand, heavy grain
+- Opal Pane (`glass-opal-pane`) — glass: Opalescent pane with a white slash
+- Amber Sheet (`glass-amber-sheet`) — glass: Warm amber architectural glass
+- Sea Window (`glass-sea-window`) — glass: Sea-green window with glare
+- Rose Lens (`glass-rose-lens`) — glass: Rose-tinted lens flare
+- Violet Plate (`glass-violet-plate`) — glass: Violet plate glass, studio light
+- Chartreuse Glass (`glass-chartreuse`) — glass: Chartreuse studio gel
+- Smoke Glass (`glass-smoke`) — glass: Smoked glass with a cool highlight
+- Peach Glaze (`glass-peach-glaze`) — glass: Peach glaze over white clay
+- Cobalt Pane (`glass-cobalt-pane`) — glass: Cobalt cathedral glass
+- Gold Leaf Glass (`glass-gold-leaf`) — glass: Gold-leafed glass panel
+- Mint Gel (`glass-mint-gel`) — glass: Mint lighting gel, soft glare
+- Magenta Sheet (`glass-magenta-sheet`) — glass: Magenta gel with white stripe
+- Lava Pool (`flux-lava-pool`) — flux: Slow lava pooling in the dark
+- Jelly Mint (`flux-jelly-mint`) — flux: Mint jelly blobs in milk
+- Plasma Orb (`flux-plasma-orb`) — flux: Plasma orbs colliding
+- Honey Drip (`flux-honey-drip`) — flux: Honey dripping through light
+- Ink Bloom (`flux-ink-bloom-pool`) — flux: Ink blooming in water
+- Peach Blob (`flux-peach-blob`) — flux: Soft peach organic blobs
+- Algae Drift (`flux-algae`) — flux: Algae drifting in a tank
+- Violet Jelly (`flux-violet-jelly`) — flux: Violet jelly under studio light
+- Copper Melt (`flux-copper-melt`) — flux: Melting copper in a dark forge
+- Arctic Blob (`flux-arctic-blob`) — flux: Pale arctic blobs on ice
+- Berry Oil (`flux-berry-oil`) — flux: Berry oil on water
+- Steel Mercury (`flux-steel-mercury`) — flux: Mercury-like steel blobs
+- Borealis Veil (`aurora-borealis-veil`) — aurora: Classic green-cyan curtains
+- Blood Curtain (`aurora-blood-curtain`) — aurora: Rare red aurora sheets
+- Violet Arc (`aurora-violet-arc`) — aurora: Violet arc over a dark ridge
+- Mint Drape (`aurora-mint-drape`) — aurora: Mint drapes in polar night
+- Gold Veil (`aurora-gold-veil`) — aurora: Gold-tinted polar veil
+- Ice Ribbon (`aurora-ice-ribbon`) — aurora: Ice-blue ribbons in the sky
+- Magenta Fold (`aurora-magenta-fold`) — aurora: Magenta folds in polar dark
+- Jade Sheet (`aurora-jade-sheet`) — aurora: Jade sheets over tundra
+- Copper Arc (`aurora-copper-arc`) — aurora: Copper arc at the horizon
+- Indigo Drape (`aurora-indigo-drape`) — aurora: Indigo drapes with cyan edge
+- Chartreuse Curtain (`aurora-chartreuse`) — aurora: Chartreuse polar curtain
+- Rose Arc (`aurora-rose-arc`) — aurora: Rose arc in polar twilight
+- Steel Veil (`aurora-steel-veil`) — aurora: Steel-grey polar veil
+- Emerald Fold (`aurora-emerald-fold`) — aurora: Emerald folds, slow motion
+- Orchid Sheet (`aurora-orchid-sheet`) — aurora: Orchid sheets over snow
+- Amber Drape (`aurora-amber-drape`) — aurora: Amber drapes at polar dusk
+- Cyan Ribbon (`aurora-cyan-ribbon`) — aurora: Thin cyan ribbons, high sky
+- Wine Curtain (`aurora-wine-curtain`) — aurora: Wine-dark polar curtain
+- Peridot Arc (`aurora-peridot-arc`) — aurora: Peridot arc with teal edge
+- Lilac Veil (`aurora-lilac-veil`) — aurora: Lilac veil over polar ice
+- Ember Fold (`aurora-ember-fold`) — aurora: Ember folds at the horizon
+- Aqua Sheet (`aurora-aqua-sheet`) — aurora: Aqua sheets, almost liquid
+- Fuchsia Drape (`aurora-fuchsia-drape`) — aurora: Fuchsia drapes in void
+- Olive Arc (`aurora-olive-arc`) — aurora: Olive arc, muted polar light
+- Sapphire Curtain (`aurora-sapphire`) — aurora: Sapphire curtains, deep night
+- Peach Veil (`aurora-peach-veil`) — aurora: Peach veil in polar twilight
+- Teal Ribbon (`aurora-teal-ribbon`) — aurora: Teal ribbons over tundra
+- Plum Fold (`aurora-plum-fold`) — aurora: Plum folds with cyan sparks
+- Lime Sheet (`aurora-lime-sheet`) — aurora: Lime sheets, electric polar
+- Bronze Drape (`aurora-bronze-drape`) — aurora: Bronze drapes at polar dusk
+- Icegreen Arc (`aurora-icegreen`) — aurora: Ice-green arc, almost white
+- Hot Pink Curtain (`aurora-hot-pink`) — aurora: Hot pink polar curtain
+- Slate Veil (`aurora-slate-veil`) — aurora: Slate veil with a cyan edge
+- Honey Arc (`aurora-honey-arc`) — aurora: Honey arc over dark pines
+- Sepia Wash (`noise-sepia-wash`) — noise: Sepia wash with analog grit
+- Cyan Static (`noise-cyan-static`) — noise: Cyan static on a cool field
+- Rose Hiss (`noise-rose-hiss`) — noise: Rose field, tape hiss
+- Olive Grit (`noise-olive-grit`) — noise: Olive wall with grit
+- Night Snow (`noise-night-snow`) — noise: Night snow, heavy grain
+- Peach Hiss (`noise-peach-hiss`) — noise: Peach daylight with hiss
+- Violet Static (`noise-violet-static`) — noise: Violet static, CRT snow
+- Fog Hiss (`noise-fog-hiss`) — noise: Fogged grey with grain
+- Ember Grit (`noise-ember-grit`) — noise: Ember wall, heavy grit
+- Mint Static (`noise-mint-static`) — noise: Mint field with analog static
+- Wine Hiss (`noise-wine-hiss`) — noise: Wine-dark field, tape hiss
+- Sand Grit (`noise-sand-grit`) — noise: Sand field, overexposed grit
+- Cobalt Static (`noise-cobalt-static`) — noise: Cobalt static, late-night TV
+- Chartreuse Noise (`noise-chartreuse`) — noise: Chartreuse field, loud grain
+- Blush Hiss (`noise-blush-hiss`) — noise: Blush paper with hiss
+- Slate Snow (`noise-slate-snow`) — noise: Slate field, fine snow
+- Gold Grit (`noise-gold-grit`) — noise: Gold wash with grit
+- Teal Static (`noise-teal-static`) — noise: Teal static on dark glass
+- Magenta Hiss (`noise-magenta-hiss`) — noise: Magenta hiss, analog bloom
+- Umber Grit (`noise-umber-grit`) — noise: Umber wall, dusty grit
+- Ice Static (`noise-ice-static`) — noise: Ice field with pale static
+- Ruby Hiss (`noise-ruby-hiss`) — noise: Ruby field, heavy hiss
+- Chrome Snow (`noise-chrome-snow`) — noise: Chrome field, fine snow
+- Saffron Grit (`noise-saffron-grit`) — noise: Saffron wash, dusty grit
+- Jade Static (`noise-jade-static`) — noise: Jade static, analog green
+- Plum Hiss (`noise-plum-hiss`) — noise: Plum field with tape hiss
+- Lime Grit (`noise-lime-grit`) — noise: Lime field, graphic grit
+- Bronze Hiss (`noise-bronze-hiss`) — noise: Bronze wash, analog hiss
+- Sky Static (`noise-sky-static`) — noise: Sky-blue static, daylight TV
+- Berry Grit (`noise-berry-grit`) — noise: Berry wash with grit
+- Paper Hiss (`noise-paper-hiss`) — noise: Warm paper, almost empty grain
+- Ink Snow (`noise-ink-snow`) — noise: Ink field with white snow
+- Solar Core (`halo-solar-core`) — halo: A bright solar halo in void
+- Ice Ring (`halo-ice-ring`) — halo: Pale ice ring, polar sun
+- Neon Orbit (`halo-neon-orbit`) — halo: Neon orbital ring
+- Rose Corona (`halo-rose-corona`) — halo: Rose corona around a dark core
+- Violet Ring (`halo-violet-ring`) — halo: Violet ring in deep space
+- Gold Orbit (`halo-gold-orbit`) — halo: Gold orbit around a dark star
+- Mint Corona (`halo-mint-corona`) — halo: Mint corona, clinic dark
+- Ember Ring (`halo-ember-ring`) — halo: Ember ring, forge light
+- Cyan Orbit (`halo-cyan-orbit`) — halo: Cyan orbit, machine glow
+- Magenta Core (`halo-magenta-core`) — halo: Magenta core with a tight ring
+- Steel Ring (`halo-steel-ring`) — halo: Steel ring, industrial halo
+- Chartreuse Halo (`halo-chartreuse`) — halo: Chartreuse halo, toxic glow
+- Wine Corona (`halo-wine-corona`) — halo: Wine corona in a dark room
+- Fog Ring (`halo-fog-ring`) — halo: Fog ring, almost gone
+- Peach Orbit (`halo-peach-orbit`) — halo: Peach orbit at dusk
+- Indigo Core (`halo-indigo-core`) — halo: Indigo core with a cyan ring
+- Lime Ring (`halo-lime-ring`) — halo: Lime ring, graphic glow
+- Blush Corona (`halo-blush-corona`) — halo: Blush corona, studio dark
+- Slate Orbit (`halo-slate-orbit`) — halo: Slate orbit with a blue edge
+- Amber Core (`halo-amber-core`) — halo: Amber core, lantern halo
+- Teal Ring (`halo-teal-ring`) — halo: Teal ring in a black tank
+- Orchid Orbit (`halo-orchid-orbit`) — halo: Orchid orbit, night club
+- Umber Corona (`halo-umber-corona`) — halo: Umber corona, earth lamp
+- Icegreen Halo (`halo-icegreen`) — halo: Ice-green halo, polar lamp
+- Ruby Ring (`halo-ruby-ring`) — halo: Ruby ring, jewelry light
+- Chrome Core (`halo-chrome-core`) — halo: Chrome core with a cool ring
+- Saffron Orbit (`halo-saffron-orbit`) — halo: Saffron orbit, temple lamp
+- Jade Corona (`halo-jade-corona`) — halo: Jade corona in a dark room
+- Plum Ring (`halo-plum-ring`) — halo: Plum ring, velvet dark
+- Bronze Core (`halo-bronze-core`) — halo: Bronze core, foundry halo
+- Sky Orbit (`halo-sky-orbit`) — halo: Sky-blue orbit on night ink
+- Berry Corona (`halo-berry-corona`) — halo: Berry corona, night fruit
+- Paper Ring (`halo-paper-ring`) — halo: Paper-white ring on charcoal
+- Plasma Core (`halo-plasma-core`) — halo: Plasma core, fusion glow
+- Ember Line (`dusk-ember-line`) — dusk: Ember horizon over cool night
+- Lilac Band (`dusk-lilac-band`) — dusk: Lilac band between day and night
+- Gold Cut (`dusk-gold-cut`) — dusk: A gold cut across the horizon
+- Mint Line (`dusk-mint-line`) — dusk: Mint afterglow on a cool sky
+- Rose Band (`dusk-rose-band`) — dusk: Rose band, last light
+- Cyan Cut (`dusk-cyan-cut`) — dusk: Cyan cut under a navy sky
+- Violet Line (`dusk-violet-line`) — dusk: Violet line, civil twilight
+- Olive Band (`dusk-olive-band`) — dusk: Olive band over dark hills
+- Peach Cut (`dusk-peach-cut`) — dusk: Peach cut, suburban dusk
+- Steel Line (`dusk-steel-line`) — dusk: Steel line, industrial dusk
+- Berry Band (`dusk-berry-band`) — dusk: Berry band, late summer dusk
+- Amber Cut (`dusk-amber-cut`) — dusk: Amber cut across farmland
+- Cobalt Line (`dusk-cobalt-line`) — dusk: Cobalt line, maritime dusk
+- Chartreuse Band (`dusk-chartreuse`) — dusk: Chartreuse band, weird dusk
+- Wine Cut (`dusk-wine-cut`) — dusk: Wine cut, vineyard dusk
+- Fog Line (`dusk-fog-line`) — dusk: Fog line, almost no color
+- Saffron Band (`dusk-saffron-band`) — dusk: Saffron band over desert
+- Teal Cut (`dusk-teal-cut`) — dusk: Teal cut, coastal dusk
+- Magenta Line (`dusk-magenta-line`) — dusk: Magenta line, city dusk
+- Umber Band (`dusk-umber-band`) — dusk: Umber band, earth dusk
+- Ice Cut (`dusk-ice-cut`) — dusk: Ice cut, polar dusk
+- Ruby Line (`dusk-ruby-line`) — dusk: Ruby line, alpine dusk
+- Chrome Band (`dusk-chrome-band`) — dusk: Chrome band, urban dusk
+- Honey Cut (`dusk-honey-cut`) — dusk: Honey cut over dark pines
+- Jade Line (`dusk-jade-line`) — dusk: Jade line, forest dusk
+- Plum Band (`dusk-plum-band`) — dusk: Plum band, orchard dusk
+- Lime Cut (`dusk-lime-cut`) — dusk: Lime cut, electric dusk
+- Bronze Line (`dusk-bronze-line`) — dusk: Bronze line, foundry dusk
+- Sky Band (`dusk-sky-band`) — dusk: Sky band, last blue hour
+- Berry Cut (`dusk-berry-cut`) — dusk: Berry cut, orchard night
+- Paper Line (`dusk-paper-line`) — dusk: Paper-white line on charcoal
+- Plasma Band (`dusk-plasma-band`) — dusk: Plasma band, sci-fi dusk
+- Sand Cut (`dusk-sand-cut`) — dusk: Sand cut, desert blue hour
+- Indigo Line (`dusk-indigo-line`) — dusk: Indigo line, nautical dusk
+- Citrus Mesh (`gen-mesh-citrus`) — mesh: Seeded citrus mesh nodes
+- Glacier Mesh (`gen-mesh-glacier`) — mesh: Seeded glacier mesh nodes
+- Neon Mesh (`gen-mesh-neon`) — mesh: Seeded neon mesh nodes
+- Umber Mesh (`gen-mesh-umber`) — mesh: Seeded umber mesh nodes
+- Lilac Mesh (`gen-mesh-lilac`) — mesh: Seeded lilac mesh nodes
+- Tropic Mesh (`gen-mesh-tropic`) — mesh: Seeded tropic mesh nodes
+- Ink Mesh (`gen-mesh-ink`) — mesh: Seeded ink mesh nodes
+- Amber Mesh (`gen-mesh-amber`) — mesh: Seeded amber mesh nodes
+- Mint Mesh (`gen-mesh-mint`) — mesh: Seeded mint mesh nodes
+- Rose Mesh (`gen-mesh-rose`) — mesh: Seeded rose mesh nodes
+- Voltage Mesh (`gen-mesh-voltage`) — mesh: Seeded voltage mesh nodes
+- Olive Mesh (`gen-mesh-olive`) — mesh: Seeded olive mesh nodes
+- Arctic Mesh (`gen-mesh-arctic`) — mesh: Seeded arctic mesh nodes
+- Berry Mesh (`gen-mesh-berry`) — mesh: Seeded berry mesh nodes
+- Steel Mesh (`gen-mesh-steel`) — mesh: Seeded steel mesh nodes
+- Wine Mesh (`gen-mesh-wine`) — mesh: Seeded wine mesh nodes
+- Gold Mesh (`gen-mesh-gold`) — mesh: Seeded gold mesh nodes
+- Jade Mesh (`gen-mesh-jade`) — mesh: Seeded jade mesh nodes
+- Orchid Mesh (`gen-mesh-orchid`) — mesh: Seeded orchid mesh nodes
+- Chrome Mesh (`gen-mesh-chrome`) — mesh: Seeded chrome mesh nodes
+- Saffron Mesh (`gen-mesh-saffron`) — mesh: Seeded saffron mesh nodes
+- Plum Mesh (`gen-mesh-plum`) — mesh: Seeded plum mesh nodes
+- Peach Mesh (`gen-mesh-peach`) — mesh: Seeded peach mesh nodes
+- Cobalt Mesh (`gen-mesh-cobalt`) — mesh: Seeded cobalt mesh nodes
+- Citrus Aura (`gen-aura-citrus`) — aura: Seeded citrus aura wash
+- Glacier Aura (`gen-aura-glacier`) — aura: Seeded glacier aura wash
+- Neon Aura (`gen-aura-neon`) — aura: Seeded neon aura wash
+- Umber Aura (`gen-aura-umber`) — aura: Seeded umber aura wash
+- Lilac Aura (`gen-aura-lilac`) — aura: Seeded lilac aura wash
+- Tropic Aura (`gen-aura-tropic`) — aura: Seeded tropic aura wash
+- Ink Aura (`gen-aura-ink`) — aura: Seeded ink aura wash
+- Amber Aura (`gen-aura-amber`) — aura: Seeded amber aura wash
+- Mint Aura (`gen-aura-mint`) — aura: Seeded mint aura wash
+- Rose Aura (`gen-aura-rose`) — aura: Seeded rose aura wash
+- Voltage Aura (`gen-aura-voltage`) — aura: Seeded voltage aura wash
+- Olive Aura (`gen-aura-olive`) — aura: Seeded olive aura wash
+- Arctic Aura (`gen-aura-arctic`) — aura: Seeded arctic aura wash
+- Berry Aura (`gen-aura-berry`) — aura: Seeded berry aura wash
+- Steel Aura (`gen-aura-steel`) — aura: Seeded steel aura wash
+- Wine Aura (`gen-aura-wine`) — aura: Seeded wine aura wash
+- Gold Aura (`gen-aura-gold`) — aura: Seeded gold aura wash
+- Jade Aura (`gen-aura-jade`) — aura: Seeded jade aura wash
+- Orchid Aura (`gen-aura-orchid`) — aura: Seeded orchid aura wash
+- Chrome Aura (`gen-aura-chrome`) — aura: Seeded chrome aura wash
+- Saffron Aura (`gen-aura-saffron`) — aura: Seeded saffron aura wash
+- Plum Aura (`gen-aura-plum`) — aura: Seeded plum aura wash
+- Peach Aura (`gen-aura-peach`) — aura: Seeded peach aura wash
+- Cobalt Aura (`gen-aura-cobalt`) — aura: Seeded cobalt aura wash
+- Citrus Lattice (`gen-lattice-citrus`) — lattice: Seeded citrus grid overlay
+- Glacier Lattice (`gen-lattice-glacier`) — lattice: Seeded glacier grid overlay
+- Neon Lattice (`gen-lattice-neon`) — lattice: Seeded neon grid overlay
+- Umber Lattice (`gen-lattice-umber`) — lattice: Seeded umber grid overlay
+- Lilac Lattice (`gen-lattice-lilac`) — lattice: Seeded lilac grid overlay
+- Tropic Lattice (`gen-lattice-tropic`) — lattice: Seeded tropic grid overlay
+- Ink Lattice (`gen-lattice-ink`) — lattice: Seeded ink grid overlay
+- Amber Lattice (`gen-lattice-amber`) — lattice: Seeded amber grid overlay
+- Mint Lattice (`gen-lattice-mint`) — lattice: Seeded mint grid overlay
+- Rose Lattice (`gen-lattice-rose`) — lattice: Seeded rose grid overlay
+- Voltage Lattice (`gen-lattice-voltage`) — lattice: Seeded voltage grid overlay
+- Olive Lattice (`gen-lattice-olive`) — lattice: Seeded olive grid overlay
+- Arctic Lattice (`gen-lattice-arctic`) — lattice: Seeded arctic grid overlay
+- Berry Lattice (`gen-lattice-berry`) — lattice: Seeded berry grid overlay
+- Steel Lattice (`gen-lattice-steel`) — lattice: Seeded steel grid overlay
+- Wine Lattice (`gen-lattice-wine`) — lattice: Seeded wine grid overlay
+- Gold Lattice (`gen-lattice-gold`) — lattice: Seeded gold grid overlay
+- Jade Lattice (`gen-lattice-jade`) — lattice: Seeded jade grid overlay
+- Orchid Lattice (`gen-lattice-orchid`) — lattice: Seeded orchid grid overlay
+- Chrome Lattice (`gen-lattice-chrome`) — lattice: Seeded chrome grid overlay
+- Citrus Flux (`gen-flux-citrus`) — flux: Seeded citrus organic blobs
+- Glacier Flux (`gen-flux-glacier`) — flux: Seeded glacier organic blobs
+- Neon Flux (`gen-flux-neon`) — flux: Seeded neon organic blobs
+- Umber Flux (`gen-flux-umber`) — flux: Seeded umber organic blobs
+- Lilac Flux (`gen-flux-lilac`) — flux: Seeded lilac organic blobs
+- Tropic Flux (`gen-flux-tropic`) — flux: Seeded tropic organic blobs
+- Ink Flux (`gen-flux-ink`) — flux: Seeded ink organic blobs
+- Amber Flux (`gen-flux-amber`) — flux: Seeded amber organic blobs
+- Mint Flux (`gen-flux-mint`) — flux: Seeded mint organic blobs
+- Rose Flux (`gen-flux-rose`) — flux: Seeded rose organic blobs
+- Voltage Flux (`gen-flux-voltage`) — flux: Seeded voltage organic blobs
+- Olive Flux (`gen-flux-olive`) — flux: Seeded olive organic blobs
+- Arctic Flux (`gen-flux-arctic`) — flux: Seeded arctic organic blobs
+- Berry Flux (`gen-flux-berry`) — flux: Seeded berry organic blobs
+- Steel Flux (`gen-flux-steel`) — flux: Seeded steel organic blobs
+- Wine Flux (`gen-flux-wine`) — flux: Seeded wine organic blobs
+- Gold Flux (`gen-flux-gold`) — flux: Seeded gold organic blobs
+- Jade Flux (`gen-flux-jade`) — flux: Seeded jade organic blobs
+- Orchid Flux (`gen-flux-orchid`) — flux: Seeded orchid organic blobs
+- Chrome Flux (`gen-flux-chrome`) — flux: Seeded chrome organic blobs
+- Citrus Prism (`gen-prism-citrus`) — prism: Seeded citrus spectral slash
+- Glacier Prism (`gen-prism-glacier`) — prism: Seeded glacier spectral slash
+- Neon Prism (`gen-prism-neon`) — prism: Seeded neon spectral slash
+- Umber Prism (`gen-prism-umber`) — prism: Seeded umber spectral slash
+- Lilac Prism (`gen-prism-lilac`) — prism: Seeded lilac spectral slash
+- Tropic Prism (`gen-prism-tropic`) — prism: Seeded tropic spectral slash
+- Ink Prism (`gen-prism-ink`) — prism: Seeded ink spectral slash
+- Amber Prism (`gen-prism-amber`) — prism: Seeded amber spectral slash
+- Mint Prism (`gen-prism-mint`) — prism: Seeded mint spectral slash
+- Rose Prism (`gen-prism-rose`) — prism: Seeded rose spectral slash
+- Voltage Prism (`gen-prism-voltage`) — prism: Seeded voltage spectral slash
+- Olive Prism (`gen-prism-olive`) — prism: Seeded olive spectral slash
+- Arctic Prism (`gen-prism-arctic`) — prism: Seeded arctic spectral slash
+- Berry Prism (`gen-prism-berry`) — prism: Seeded berry spectral slash
+- Steel Prism (`gen-prism-steel`) — prism: Seeded steel spectral slash
+- Wine Prism (`gen-prism-wine`) — prism: Seeded wine spectral slash
+- Citrus Aurora (`gen-aurora-citrus`) — aurora: Seeded citrus polar curtains
+- Glacier Aurora (`gen-aurora-glacier`) — aurora: Seeded glacier polar curtains
+- Neon Aurora (`gen-aurora-neon`) — aurora: Seeded neon polar curtains
+- Umber Aurora (`gen-aurora-umber`) — aurora: Seeded umber polar curtains
+- Lilac Aurora (`gen-aurora-lilac`) — aurora: Seeded lilac polar curtains
+- Tropic Aurora (`gen-aurora-tropic`) — aurora: Seeded tropic polar curtains
+- Ink Aurora (`gen-aurora-ink`) — aurora: Seeded ink polar curtains
+- Amber Aurora (`gen-aurora-amber`) — aurora: Seeded amber polar curtains
+- Mint Aurora (`gen-aurora-mint`) — aurora: Seeded mint polar curtains
+- Rose Aurora (`gen-aurora-rose`) — aurora: Seeded rose polar curtains
+- Voltage Aurora (`gen-aurora-voltage`) — aurora: Seeded voltage polar curtains
+- Olive Aurora (`gen-aurora-olive`) — aurora: Seeded olive polar curtains
+- Arctic Aurora (`gen-aurora-arctic`) — aurora: Seeded arctic polar curtains
+- Berry Aurora (`gen-aurora-berry`) — aurora: Seeded berry polar curtains
+- Steel Aurora (`gen-aurora-steel`) — aurora: Seeded steel polar curtains
+- Wine Aurora (`gen-aurora-wine`) — aurora: Seeded wine polar curtains
+- Gold Aurora (`gen-aurora-gold`) — aurora: Seeded gold polar curtains
+- Jade Aurora (`gen-aurora-jade`) — aurora: Seeded jade polar curtains
+- Orchid Aurora (`gen-aurora-orchid`) — aurora: Seeded orchid polar curtains
+- Chrome Aurora (`gen-aurora-chrome`) — aurora: Seeded chrome polar curtains
+- Citrus Nebula (`gen-nebula-citrus`) — nebula: Seeded citrus gas clouds
+- Glacier Nebula (`gen-nebula-glacier`) — nebula: Seeded glacier gas clouds
+- Neon Nebula (`gen-nebula-neon`) — nebula: Seeded neon gas clouds
+- Umber Nebula (`gen-nebula-umber`) — nebula: Seeded umber gas clouds
+- Lilac Nebula (`gen-nebula-lilac`) — nebula: Seeded lilac gas clouds
+- Tropic Nebula (`gen-nebula-tropic`) — nebula: Seeded tropic gas clouds
+- Ink Nebula (`gen-nebula-ink`) — nebula: Seeded ink gas clouds
+- Amber Nebula (`gen-nebula-amber`) — nebula: Seeded amber gas clouds
+- Mint Nebula (`gen-nebula-mint`) — nebula: Seeded mint gas clouds
+- Rose Nebula (`gen-nebula-rose`) — nebula: Seeded rose gas clouds
+- Voltage Nebula (`gen-nebula-voltage`) — nebula: Seeded voltage gas clouds
+- Olive Nebula (`gen-nebula-olive`) — nebula: Seeded olive gas clouds
+- Arctic Nebula (`gen-nebula-arctic`) — nebula: Seeded arctic gas clouds
+- Berry Nebula (`gen-nebula-berry`) — nebula: Seeded berry gas clouds
+- Steel Nebula (`gen-nebula-steel`) — nebula: Seeded steel gas clouds
+- Wine Nebula (`gen-nebula-wine`) — nebula: Seeded wine gas clouds
+- Citrus Glass (`gen-glass-citrus`) — glass: Seeded citrus studio gel
+- Glacier Glass (`gen-glass-glacier`) — glass: Seeded glacier studio gel
+- Neon Glass (`gen-glass-neon`) — glass: Seeded neon studio gel
+- Umber Glass (`gen-glass-umber`) — glass: Seeded umber studio gel
+- Lilac Glass (`gen-glass-lilac`) — glass: Seeded lilac studio gel
+- Tropic Glass (`gen-glass-tropic`) — glass: Seeded tropic studio gel
+- Ink Glass (`gen-glass-ink`) — glass: Seeded ink studio gel
+- Amber Glass (`gen-glass-amber`) — glass: Seeded amber studio gel
+- Mint Glass (`gen-glass-mint`) — glass: Seeded mint studio gel
+- Rose Glass (`gen-glass-rose`) — glass: Seeded rose studio gel
+- Voltage Glass (`gen-glass-voltage`) — glass: Seeded voltage studio gel
+- Olive Glass (`gen-glass-olive`) — glass: Seeded olive studio gel
+- Arctic Glass (`gen-glass-arctic`) — glass: Seeded arctic studio gel
+- Berry Glass (`gen-glass-berry`) — glass: Seeded berry studio gel
+- Steel Glass (`gen-glass-steel`) — glass: Seeded steel studio gel
+- Wine Glass (`gen-glass-wine`) — glass: Seeded wine studio gel

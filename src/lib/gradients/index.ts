@@ -37,6 +37,8 @@ export const GRADIENTS: Gradient[] = COMBINED.filter((g) => {
   return true
 })
 
+export const GRADIENT_COUNT = GRADIENTS.length
+
 export const DEFAULT_GRADIENT_ID = "sky-aurora"
 
 export function getDefaultGradient(): Gradient {
