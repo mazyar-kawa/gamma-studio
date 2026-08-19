@@ -574,6 +574,15 @@
   border-radius: var(--radius-xl);
 }
 
+/* Off-screen capture always uses the rich stack, regardless of viewport */
+.gradient-render-rich-only .gradient-render-safe {
+  display: none !important;
+}
+
+.gradient-render-rich-only .gradient-render-rich {
+  display: block !important;
+}
+
 /* Dual gradient render paths — mobile uses .gradient-render-safe (no blend/blur/inset) */
 .gradient-render-safe {
   display: none;

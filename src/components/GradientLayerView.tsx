@@ -107,6 +107,8 @@ interface GradientStackProps {
   light: boolean
   grain?: boolean
   mode?: "card" | "full"
+  /** Force rich blend/blur path (used for off-screen PNG capture on mobile). */
+  variant?: "auto" | "rich"
   className?: string
 }
 
@@ -116,11 +118,14 @@ export function GradientStack({
   light,
   grain = false,
   mode = "card",
+  variant = "auto",
   className = "",
 }: GradientStackProps) {
+  const variantClass = variant === "rich" ? "gradient-render-rich-only" : ""
+
   return (
     <div
-      className={`gradient-stack ${FILL} ${className}`}
+      className={`gradient-stack ${FILL} ${variantClass} ${className}`.trim()}
       style={{ backgroundColor: base }}
     >
       {/* Touch / mobile: plain stacked gradients — no blend, no blur, no JS */}

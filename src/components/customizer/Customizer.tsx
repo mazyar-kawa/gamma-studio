@@ -16,6 +16,7 @@ import {
 import { exportGradient, type ExportFormat } from "@/lib/exportFormats";
 import { generateAIPrompt } from "@/lib/generateAIPrompt";
 import { copyToClipboard } from "@/lib/clipboard";
+import { hasVisiblePixels } from "@/lib/image-utils";
 import type { Layer } from "@/lib/gradients";
 import { resolveDisplayContext } from "@/lib/gradients";
 import { Button } from "@/components/ui/button";
@@ -36,34 +37,6 @@ import {
 
 const EXPORT_W = 1600;
 const EXPORT_H = 900;
-
-/** True if the PNG data URL has actual painted pixels (not fully transparent) */
-function hasVisiblePixels(dataUrl: string): Promise<boolean> {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => {
-      try {
-        const c = document.createElement("canvas");
-        c.width = EXPORT_W;
-        c.height = EXPORT_H;
-        const ctx = c.getContext("2d");
-        if (!ctx) return resolve(false);
-        ctx.drawImage(img, 0, 0);
-        const data = ctx.getImageData(0, 0, EXPORT_W, EXPORT_H).data;
-        let visible = 0;
-        for (let i = 3; i < data.length; i += 4) {
-          if (data[i] > 0) visible++;
-          if (visible > 200) break;
-        }
-        resolve(visible > 200);
-      } catch {
-        resolve(false);
-      }
-    };
-    img.onerror = () => resolve(false);
-    img.src = dataUrl;
-  });
-}
 
 const FOCUSABLE_SELECTOR =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -321,7 +294,7 @@ export function Customizer() {
         };
         const url =
           dlFormat === "png" ? await toPng(node, opts) : await toSvg(node, opts);
-        if (dlFormat === "png" && !(await hasVisiblePixels(url))) {
+        if (dlFormat === "png" && !(await hasVisiblePixels(url, EXPORT_W, EXPORT_H))) {
           throw new Error("blank image");
         }
         const link = document.createElement("a");
@@ -353,9 +326,9 @@ export function Customizer() {
         animation: "fullscreen-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both",
       }}
     >
-      {/* ══ Left: Live Preview ══ */}
+      {/* ══ Left: Live Preview (desktop only — mobile shows edit panel full screen) ══ */}
       <div
-        className="relative h-[38dvh] min-h-0 shrink-0 overflow-hidden md:h-auto md:flex-1"
+        className="relative hidden min-h-0 shrink-0 overflow-hidden md:flex md:flex-1 md:h-auto"
         data-customizer-preview
       >
         <GradientStack
@@ -431,14 +404,56 @@ export function Customizer() {
 
       {/* ══ Right: Control Panel ══ */}
       {/* Aplicando los tonos oscuros de la imagen: #0a0a0a para el panel general y bordes sutiles white/5 */}
-      <div className="flex min-h-0 w-full flex-1 flex-col overflow-hidden border-t border-white/5 bg-[#0a0a0a] md:h-full md:w-[420px] md:shrink-0 md:flex-none md:border-t-0 md:border-l">
+      <div className="flex min-h-0 w-full flex-1 flex-col overflow-hidden bg-[#0a0a0a] md:h-full md:w-[420px] md:shrink-0 md:flex-none md:border-l md:border-white/5">
         {/* Panel header - Fondo ligeramente contrastado */}
         <div className="flex shrink-0 items-center justify-between border-b border-white/5 bg-[#0d0d0d] px-5 py-2">
-          <div className="flex items-center gap-2">
+          <div className="flex min-w-0 flex-1 flex-col gap-0.5 md:hidden">
+            <span className="truncate text-[13px] font-medium text-white/90">{active.name}</span>
+            <span className="truncate text-[11px] text-white/40">{active.category}</span>
+          </div>
+          <div className="hidden items-center gap-2 md:flex">
             <Icon icon="lucide:sliders-horizontal" width={15} height={15} className="text-white/60" />
             <span className="text-[13px] font-medium text-white/90">Customize</span>
           </div>
           <div className="flex items-center gap-0.5">
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={goPrev}
+              title="Previous gradient"
+              aria-label="Previous gradient"
+              className="text-white/40 hover:bg-white/5 hover:text-white md:hidden"
+            >
+              <Icon icon="lucide:chevron-left" width={14} height={14} />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={goNext}
+              title="Next gradient"
+              aria-label="Next gradient"
+              className="text-white/40 hover:bg-white/5 hover:text-white md:hidden"
+            >
+              <Icon icon="lucide:chevron-right" width={14} height={14} />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={() => toggleFavorite(active.id)}
+              title={favorites.includes(active.id) ? "Remove from favorites" : "Save as favorite"}
+              aria-label={favorites.includes(active.id) ? "Remove from favorites" : "Save as favorite"}
+              aria-pressed={favorites.includes(active.id)}
+              className={`text-white/40 hover:bg-white/5 hover:text-white md:hidden ${
+                favorites.includes(active.id) ? "text-rose-400" : ""
+              }`}
+            >
+              <Icon
+                icon="mdi:heart"
+                width={14}
+                height={14}
+                className={favorites.includes(active.id) ? "fill-current" : ""}
+              />
+            </Button>
             <Button
               variant="ghost"
               size="icon-sm"
@@ -613,8 +628,8 @@ export function Customizer() {
             </div>
           </div>
 
-          {/* Keyboard hints - Fondo contrastado sutil abajo */}
-          <div className="px-5 py-3 border-t border-white/5 bg-[#0d0d0d] flex items-center gap-4 text-white/40 text-[11px] font-medium tracking-wide">
+          {/* Keyboard hints — desktop only */}
+          <div className="hidden px-5 py-3 border-t border-white/5 bg-[#0d0d0d] md:flex items-center gap-4 text-white/40 text-[11px] font-medium tracking-wide">
             <span className="flex items-center gap-1.5">
               <kbd className="px-1.5 py-0.5 bg-white/5 border border-white/5 rounded">←→</kbd> nav
             </span>
