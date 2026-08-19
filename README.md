@@ -93,19 +93,6 @@ Open **[http://localhost:3000](http://localhost:3000)**.
 
 ---
 
-## Environment variables
-
-| Variable | Required | Description |
-| --- | :---: | --- |
-| `NEXT_PUBLIC_SITE_URL` | No | Canonical URL for Open Graph, sitemap & JSON-LD (`https://studio.gammaui.com`) |
-| `NEXT_PUBLIC_TWITTER_SITE` | No | X/Twitter `@site` handle for cards (default `@gammaui`) |
-| `NEXT_PUBLIC_TWITTER_CREATOR` | No | X/Twitter `@creator` handle (default `@mazyar_kawa`) |
-| `GITHUB_TOKEN` | No | GitHub API token for star badge rate limits |
-
-See [`.env.example`](.env.example). Run `bun run generate:llms` to refresh `public/llms-full.txt` from the preset catalog.
-
----
-
 ## Tech stack
 
 | Layer | Tools |
