@@ -9,42 +9,52 @@ import {
   type Layer,
 } from "@/lib/gradients"
 
+/** Absolute fill without `inset` — unsupported on some Samsung Internet builds */
+const FILL = "absolute top-0 left-0 h-full w-full"
+
 interface GradientLayerViewProps {
   layer: Layer
   light: boolean
-  /** Card thumbnails cap blur; fullscreen uses scaled atmospheric blur */
   mode?: "card" | "full"
 }
 
-function layerBackgroundStyle(layer: Layer): CSSProperties {
+function safeLayerStyle(layer: Layer): CSSProperties {
   const repeating = isRepeatingLayer(layer)
 
   return {
-    backgroundImage: layer.background,
+    background: layer.background,
     backgroundPosition: "center",
     ...(layer.backgroundSize
       ? { backgroundSize: layer.backgroundSize, backgroundRepeat: "repeat" }
       : repeating
         ? { backgroundRepeat: "repeat" }
         : { backgroundSize: "cover", backgroundRepeat: "no-repeat" }),
-    transform: "translateZ(0)",
-    backfaceVisibility: "hidden",
+    opacity: layer.opacity ?? 1,
   }
 }
 
-/**
- * Renders one gradient layer with blur and blend on separate elements.
- * Samsung Internet / Android WebView often drop layers when filter +
- * mix-blend-mode share the same node.
- */
-export function GradientLayerView({
+function richLayerStyle(layer: Layer): CSSProperties {
+  const repeating = isRepeatingLayer(layer)
+
+  return {
+    background: layer.background,
+    backgroundPosition: "center",
+    ...(layer.backgroundSize
+      ? { backgroundSize: layer.backgroundSize, backgroundRepeat: "repeat" }
+      : repeating
+        ? { backgroundRepeat: "repeat" }
+        : { backgroundSize: "cover", backgroundRepeat: "no-repeat" }),
+  }
+}
+
+function RichGradientLayer({
   layer,
   light,
   mode = "card",
 }: GradientLayerViewProps) {
   const blendMode = resolveBlendMode(layer.blendMode, light) as CSSProperties["mixBlendMode"]
   const opacity = layer.opacity ?? 1
-  const bgStyle = layerBackgroundStyle(layer)
+  const bgStyle = richLayerStyle(layer)
 
   if (mode === "full") {
     const scaled = scaleBlurFull(layer.blur)
@@ -53,12 +63,9 @@ export function GradientLayerView({
 
     if (blurActive) {
       return (
-        <div
-          className="gradient-layer-blend absolute inset-0"
-          style={{ mixBlendMode: blendMode, opacity }}
-        >
+        <div className={`gradient-layer-blend ${FILL}`} style={{ mixBlendMode: blendMode, opacity }}>
           <div
-            className="gamma-blur absolute inset-0"
+            className={`gamma-blur ${FILL}`}
             style={{
               ...bgStyle,
               ...({ "--blur-m": `${blurM}px`, "--blur-d": `${scaled.desktop}px` } as CSSProperties),
@@ -70,7 +77,7 @@ export function GradientLayerView({
 
     return (
       <div
-        className="gradient-layer-blend absolute inset-0"
+        className={`gradient-layer-blend ${FILL}`}
         style={{ ...bgStyle, mixBlendMode: blendMode, opacity }}
       />
     )
@@ -80,21 +87,15 @@ export function GradientLayerView({
 
   if (blur > 0) {
     return (
-      <div
-        className="gradient-layer-blend absolute inset-0"
-        style={{ mixBlendMode: blendMode, opacity }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{ ...bgStyle, filter: `blur(${blur}px)` }}
-        />
+      <div className={`gradient-layer-blend ${FILL}`} style={{ mixBlendMode: blendMode, opacity }}>
+        <div className={FILL} style={{ ...bgStyle, filter: `blur(${blur}px)` }} />
       </div>
     )
   }
 
   return (
     <div
-      className="gradient-layer-blend absolute inset-0"
+      className={`gradient-layer-blend ${FILL}`}
       style={{ ...bgStyle, mixBlendMode: blendMode, opacity }}
     />
   )
@@ -119,13 +120,23 @@ export function GradientStack({
 }: GradientStackProps) {
   return (
     <div
-      className={`gradient-stack absolute inset-0 ${className}`}
+      className={`gradient-stack ${FILL} ${className}`}
       style={{ backgroundColor: base }}
     >
-      {layers.map((layer, i) => (
-        <GradientLayerView key={i} layer={layer} light={light} mode={mode} />
-      ))}
-      {grain ? <GrainOverlay className="absolute inset-0" /> : null}
+      {/* Touch / mobile: plain stacked gradients — no blend, no blur, no JS */}
+      <div className={`gradient-render-safe ${FILL}`} aria-hidden="true">
+        {layers.map((layer, i) => (
+          <div key={`safe-${i}`} className={FILL} style={safeLayerStyle(layer)} />
+        ))}
+      </div>
+
+      {/* Desktop: authored blend modes + blur */}
+      <div className={`gradient-render-rich ${FILL}`} aria-hidden="true">
+        {layers.map((layer, i) => (
+          <RichGradientLayer key={`rich-${i}`} layer={layer} light={light} mode={mode} />
+        ))}
+        {grain ? <GrainOverlay className={FILL} /> : null}
+      </div>
     </div>
   )
 }

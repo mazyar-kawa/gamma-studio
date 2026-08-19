@@ -146,7 +146,7 @@ export function GradientCard({ gradient }: Props) {
   return (
     <div
       id={`g-${gradient.id}`}
-      className="scroll-mt-24 outline-none squircle-element-xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      className="scroll-mt-24 outline-none rounded-2xl focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       data-card
       tabIndex={0}
       role="group"
@@ -159,7 +159,7 @@ export function GradientCard({ gradient }: Props) {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onClick={handleCardClick}
-        className={`swatch marks relative w-full aspect-[1/1.15] squircle-element-xl border-r border-b border-border overflow-hidden transition-all duration-300 ease-out shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] ${isActive ? "is-active" : ""
+        className={`swatch marks relative w-full min-h-[260px] aspect-[1/1.15] overflow-hidden rounded-2xl border-r border-b border-border transition-all duration-300 ease-out shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] md:min-h-0 ${isActive ? "is-active" : ""
           } ${flash ? "card-flash" : ""} ${tapOpen ? "is-tap-open" : ""}`}
       >
         <GradientStack
@@ -173,12 +173,12 @@ export function GradientCard({ gradient }: Props) {
         {/* 3D highlight that follows cursor */}
         <div
           ref={highlightRef}
-          className="absolute inset-0 z-20 pointer-events-none transition-opacity duration-300"
+          className="absolute top-0 left-0 z-20 h-full w-full pointer-events-none transition-opacity duration-300"
           style={{ opacity: 0 }}
         />
 
         {/* Hover overlay with actions */}
-        <div className="swatch-overlay absolute inset-0 bg-black/20 backdrop-blur-[1px] grid grid-cols-1 gap-2 place-content-center z-30 p-4">
+        <div className="swatch-overlay absolute top-0 left-0 z-30 grid h-full w-full grid-cols-1 place-content-center gap-2 bg-black/20 p-4 backdrop-blur-[1px]">
           <div className="grid grid-cols-2 gap-2">
             <button
               onClick={handlePreview}

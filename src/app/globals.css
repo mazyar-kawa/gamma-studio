@@ -350,7 +350,7 @@
   opacity: 1;
 }
 
-@media (scripting: enabled) {
+@media (scripting: enabled) and (pointer: fine) {
   .reveal {
     opacity: 0;
   }
@@ -527,9 +527,14 @@
 }
 
 [data-card] {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 380px;
   touch-action: manipulation;
+}
+
+@media (pointer: fine) {
+  [data-card] {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 380px;
+  }
 }
 
 @keyframes card-flash {
@@ -569,31 +574,53 @@
   border-radius: var(--radius-xl);
 }
 
-/* Samsung / Android: isolation + blend on same GPU layer often hides patterns */
-.gradient-stack {
-  isolation: isolate;
-  transform: translateZ(0);
+/* Dual gradient render paths — mobile uses .gradient-render-safe (no blend/blur/inset) */
+.gradient-render-safe {
+  display: none;
 }
 
-@media (pointer: coarse) {
+.gradient-render-rich {
+  display: block;
+}
+
+@media (pointer: coarse), (max-width: 767px) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .gradient-render-safe {
+    display: block;
+  }
+
+  .gradient-render-rich {
+    display: none;
+  }
+
   .gradient-stack {
     isolation: auto;
+    transform: none;
   }
 
   .swatch {
+    min-height: 260px;
     transform-style: flat;
   }
 }
 
-.gradient-layer-blend {
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+@supports not (aspect-ratio: 1 / 1) {
+  .swatch {
+    min-height: 280px;
+  }
 }
 
-@supports not (corner-shape: squircle) {
-  .squircle-element,
-  .squircle-element-xl {
-    corner-shape: round;
-  }
+.gradient-stack {
+  isolation: isolate;
+}
+
+.gradient-layer-blend {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
