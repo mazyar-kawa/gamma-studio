@@ -82,7 +82,7 @@ export const metadata: Metadata = {
         url: "/images/metadata/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} — ambient & mesh gradient generator`,
+        alt: `${SITE_NAME} — Layer ambient light behind every interface`,
         type: "image/png",
       },
     ],
