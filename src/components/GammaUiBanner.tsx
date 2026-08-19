@@ -1,8 +1,8 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+import { GammaUiLogo } from '@/components/gamma-ui-logo'
 import { Banner } from '@/components/ui/banner'
 import { GAMMA_UI_RAINBOW_COLORS, GAMMA_UI_URL } from '@/lib/constants'
 
@@ -20,22 +20,7 @@ export function GammaUiBanner() {
         rel='noopener noreferrer'
         className='group inline-flex max-w-[calc(100%-2.5rem)] flex-wrap items-center justify-center gap-x-2 gap-y-1 px-2 transition-opacity hover:opacity-90'
       >
-        <Image
-          src='/gamma-ui-light.svg'
-          alt=''
-          width={24}
-          height={24}
-          aria-hidden
-          className='size-[24px] dark:hidden'
-        />
-        <Image
-          src='/gamma-ui-dark.svg'
-          alt=''
-          width={18}
-          height={18}
-          aria-hidden
-          className='hidden size-[18px] dark:block'
-        />
+        <GammaUiLogo className='size-8 shrink-0' size={20} />
         <span>
           Also explore{' '}
           <span className='font-semibold text-primary'>Gamma UI</span>
