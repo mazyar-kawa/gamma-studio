@@ -1,6 +1,6 @@
 # Gamma Studio
 
-> Ambient UI gradients built from layered CSS blend modes. Browse 500+ patterns, customize layers, and export CSS.
+> Ambient UI gradients built from layered CSS blend modes. Browse 600+ patterns, customize layers, and export CSS.
 
 Gamma Studio is an open-source gradient gallery and generator based on Aura by Cristian Olivera.
 

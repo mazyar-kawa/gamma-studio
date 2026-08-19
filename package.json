@@ -1,9 +1,11 @@
 {
-  "name": "gamma-gradients",
+  "name": "gamma-studio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "generate:llms": "bun scripts/generate-llms-full.ts",
+    "prebuild": "bun run generate:llms",
     "build": "NEXT_TELEMETRY_DISABLED=1 next build",
     "start": "next start",
     "lint": "next lint"

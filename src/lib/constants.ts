@@ -7,6 +7,13 @@ export const AURA_URL = 'https://github.com/mazyar-kawa/gamma-studio'
 
 export const GAMMA_UI_URL = 'https://gammaui.com'
 export const GAMMA_UI_GITHUB = 'https://github.com/mazyar-kawa/gamma-ui'
+
+/** Override via NEXT_PUBLIC_TWITTER_SITE / NEXT_PUBLIC_TWITTER_CREATOR in production */
+export const TWITTER_SITE =
+  process.env.NEXT_PUBLIC_TWITTER_SITE ?? '@gammaui'
+export const TWITTER_CREATOR =
+  process.env.NEXT_PUBLIC_TWITTER_CREATOR ?? '@mazyar_kawa'
+
 export const GAMMA_UI_RAINBOW_COLORS = [
   'rgba(0,138,255,0.55)',
   'rgba(247,164,66,0.65)',
@@ -23,6 +30,6 @@ export const SITE_URL =
 export const SITE_NAME = 'Gamma Studio'
 export const SITE_TAGLINE = 'Ambient gradient backgrounds'
 export const SITE_DESCRIPTION =
-  'Free CSS gradient generator with 500+ layered ambient, mesh, and aurora patterns. Tune layers and copy CSS, Tailwind, or SVG.'
+  'Free CSS gradient generator with 600+ layered ambient, mesh, and aurora patterns. Tune layers and copy CSS, Tailwind, or SVG.'
 export const SITE_OG_DESCRIPTION =
-  'Free CSS gradient generator with 500+ ambient, mesh & aurora patterns. Copy CSS, Tailwind, or SVG in one click.'
+  'Free CSS gradient generator with 600+ ambient, mesh & aurora patterns. Copy CSS, Tailwind, or SVG in one click.'

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Moon, Sun } from "lucide-react"
+import { Moon, Sun, Sparkles } from "lucide-react"
 import { useGradients } from "@/components/GradientProvider"
 import { GitHubBadge } from "@/components/ui/GitHubBadge"
 import { GitHubIcon } from "@/components/ui/github-icon"
@@ -49,6 +49,22 @@ export function Header() {
                 <Sun className="size-4" />
               )}
             </span>
+          </Button>
+
+          <Button
+            variant="outline"
+            size="icon"
+            asChild
+            className="sm:hidden"
+          >
+            <a
+              href={GAMMA_UI_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Gamma UI — motion-ready React components"
+            >
+              <Sparkles className="size-4" />
+            </a>
           </Button>
 
           <Button variant="outline" size="sm" asChild className="hidden sm:inline-flex">

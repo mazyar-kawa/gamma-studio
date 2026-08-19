@@ -7,6 +7,8 @@ import {
   SITE_OG_DESCRIPTION,
   SITE_TAGLINE,
   SITE_URL,
+  TWITTER_CREATOR,
+  TWITTER_SITE,
 } from "@/lib/constants"
 import { ThemeProvider } from "@/components/theme-provider"
 import { GammaUiBanner } from "@/components/GammaUiBanner"
@@ -32,8 +34,8 @@ export const metadata: Metadata = {
   generator: "Next.js",
   category: "technology",
   keywords: [
-    "gamma",
-    "gamma gradients",
+    "gamma studio",
+    "gamma ui",
     "gradient generator",
     "gradient maker",
     "css gradient generator",
@@ -87,6 +89,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: TWITTER_SITE,
+    creator: TWITTER_CREATOR,
     title: `${SITE_NAME} — Gradient Generator & Maker`,
     description: SITE_OG_DESCRIPTION,
     images: [
