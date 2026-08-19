@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
 import { Icon } from "@iconify/react";
 import { useGradients } from "@/components/GradientProvider";
-import { GrainOverlay } from "@/components/GrainOverlay";
-import { gradientLayerStyle, isLightBase, type Gradient, CATEGORIES } from "@/lib/gradients";
+import { GradientStack } from "@/components/GradientLayerView";
+import { isLightBase, type Gradient, CATEGORIES } from "@/lib/gradients";
 import { generateAIPrompt } from "@/lib/generateAIPrompt";
 import { copyToClipboard } from "@/lib/clipboard";
 
@@ -161,22 +161,14 @@ export function GradientCard({ gradient }: Props) {
         onClick={handleCardClick}
         className={`swatch marks relative w-full aspect-[1/1.15] squircle-element-xl border-r border-b border-border overflow-hidden transition-all duration-300 ease-out shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] ${isActive ? "is-active" : ""
           } ${flash ? "card-flash" : ""} ${tapOpen ? "is-tap-open" : ""}`}
-        style={{ transformStyle: "preserve-3d" }}
       >
-        {/* Preview stack — isolated so blend modes composite against the preset base only */}
-        <div
-          className="absolute inset-0 isolate"
-          style={{ backgroundColor: gradient.base }}
-        >
-          {gradient.layers.map((layer, i) => (
-            <div
-              key={i}
-              className="absolute inset-0"
-              style={gradientLayerStyle(layer, lightBackdrop, { maxBlur: 24 })}
-            />
-          ))}
-          {gradient.grain && <GrainOverlay className="absolute inset-0" />}
-        </div>
+        <GradientStack
+          base={gradient.base}
+          layers={gradient.layers}
+          light={lightBackdrop}
+          grain={gradient.grain ?? false}
+          mode="card"
+        />
 
         {/* 3D highlight that follows cursor */}
         <div

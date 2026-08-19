@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, useDeferredValue } f
 import { Icon } from "@iconify/react";
 import { toPng, toSvg } from "html-to-image";
 import { useGradients } from "@/components/GradientProvider";
-import { GrainOverlay } from "@/components/GrainOverlay";
+import { GradientStack } from "@/components/GradientLayerView";
 import { DraggableNode } from "@/components/customizer/DraggableNode";
 import { LayerPanel } from "@/components/customizer/LayerPanel";
 import { ExportPanel } from "@/components/customizer/ExportPanel";
@@ -17,7 +17,7 @@ import { exportGradient, type ExportFormat } from "@/lib/exportFormats";
 import { generateAIPrompt } from "@/lib/generateAIPrompt";
 import { copyToClipboard } from "@/lib/clipboard";
 import type { Layer } from "@/lib/gradients";
-import { resolveBlendMode, resolveDisplayContext, scaleBlurFull } from "@/lib/gradients";
+import { resolveDisplayContext } from "@/lib/gradients";
 import { Button } from "@/components/ui/button";
 import {
   Check,
@@ -355,36 +355,17 @@ export function Customizer() {
     >
       {/* ══ Left: Live Preview ══ */}
       <div
-        className="relative h-[38dvh] min-h-0 shrink-0 overflow-hidden transition-[background-color] duration-300 ease-out md:h-auto md:flex-1"
-        style={{ backgroundColor: previewBase }}
+        className="relative h-[38dvh] min-h-0 shrink-0 overflow-hidden md:h-auto md:flex-1"
         data-customizer-preview
       >
-        {/* Dynamic layers */}
-        {effectiveLayers.map((layer, i) => {
-          const b = scaleBlurFull(layer.blur);
-          const blurActive = b.mobile > 0;
-          return (
-            <div
-              key={i}
-              className={`absolute inset-0 ${blurActive ? "gamma-blur" : ""}`}
-              style={{
-                ...(blurActive
-                  ? ({ "--blur-m": `${b.mobile}px`, "--blur-d": `${b.desktop}px` } as React.CSSProperties)
-                  : {}),
-                backgroundImage: layer.background,
-                backgroundSize: layer.backgroundSize ?? "cover",
-                mixBlendMode: resolveBlendMode(
-                  layer.blendMode,
-                  previewLight,
-                ) as React.CSSProperties["mixBlendMode"],
-                opacity: layer.opacity ?? 1,
-              }}
-            />
-          );
-        })}
-
-        {/* Grain overlay */}
-        {effectiveGrain && <GrainOverlay className="absolute inset-0" />}
+        <GradientStack
+          base={previewBase}
+          layers={effectiveLayers}
+          light={previewLight}
+          grain={effectiveGrain}
+          mode="full"
+          className="transition-[background-color] duration-300 ease-out"
+        />
 
         {/* Draggable nodes */}
         {nodes.map(
@@ -660,30 +641,15 @@ export function Customizer() {
               width: EXPORT_W,
               height: EXPORT_H,
               position: "relative",
-              backgroundColor: previewBase,
             }}
           >
-            {effectiveLayers.map((layer, i) => (
-              <div
-                key={i}
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  backgroundImage: layer.background,
-                  backgroundSize: layer.backgroundSize ?? "cover",
-                  mixBlendMode: resolveBlendMode(
-                    layer.blendMode,
-                    previewLight,
-                  ) as React.CSSProperties["mixBlendMode"],
-                  filter:
-                    layer.blur > 0
-                      ? `blur(${scaleBlurFull(layer.blur).desktop}px)`
-                      : undefined,
-                  opacity: layer.opacity ?? 1,
-                }}
-              />
-            ))}
-            {effectiveGrain && <GrainOverlay className="absolute inset-0" />}
+            <GradientStack
+              base={previewBase}
+              layers={effectiveLayers}
+              light={previewLight}
+              grain={effectiveGrain}
+              mode="full"
+            />
           </div>
         </div>
       </div>
