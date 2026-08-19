@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
 import { Icon } from "@iconify/react";
 import { useGradients } from "@/components/GradientProvider";
-import { GradientStack } from "@/components/GradientLayerView";
+import { GradientSwatch } from "@/components/GradientSwatch";
 import { isLightBase, type Gradient, CATEGORIES } from "@/lib/gradients";
 import { generateAIPrompt } from "@/lib/generateAIPrompt";
 import { copyToClipboard } from "@/lib/clipboard";
@@ -162,12 +162,12 @@ export function GradientCard({ gradient }: Props) {
         className={`swatch marks relative w-full min-h-[260px] aspect-[1/1.15] overflow-hidden rounded-2xl border-r border-b border-border transition-all duration-300 ease-out shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] md:min-h-0 ${isActive ? "is-active" : ""
           } ${flash ? "card-flash" : ""} ${tapOpen ? "is-tap-open" : ""}`}
       >
-        <GradientStack
+        <GradientSwatch
+          id={gradient.id}
           base={gradient.base}
           layers={gradient.layers}
           light={lightBackdrop}
           grain={gradient.grain ?? false}
-          mode="card"
         />
 
         {/* 3D highlight that follows cursor */}
