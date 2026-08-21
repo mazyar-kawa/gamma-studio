@@ -319,7 +319,7 @@ export function Customizer() {
       role="dialog"
       aria-modal="true"
       aria-label="Gradient customizer"
-      className="fixed inset-x-0 bottom-0 z-[100] flex min-h-0 flex-col overflow-hidden md:flex-row"
+      className="fixed inset-x-0 bottom-0 z-[100] flex min-h-0 max-w-full flex-col overflow-hidden md:flex-row"
       style={{
         top: "var(--banner-height, 0px)",
         height: "calc(100dvh - var(--banner-height, 0px))",
@@ -404,9 +404,9 @@ export function Customizer() {
 
       {/* ══ Right: Control Panel ══ */}
       {/* Aplicando los tonos oscuros de la imagen: #0a0a0a para el panel general y bordes sutiles white/5 */}
-      <div className="flex min-h-0 w-full flex-1 flex-col overflow-hidden bg-[#0a0a0a] md:h-full md:w-[420px] md:shrink-0 md:flex-none md:border-l md:border-white/5">
+      <div className="flex min-h-0 min-w-0 w-full flex-1 flex-col overflow-hidden bg-[#0a0a0a] md:h-full md:w-[420px] md:shrink-0 md:flex-none md:border-l md:border-white/5">
         {/* Panel header - Fondo ligeramente contrastado */}
-        <div className="flex shrink-0 items-center justify-between border-b border-white/5 bg-[#0d0d0d] px-5 py-2">
+        <div className="flex shrink-0 items-start justify-between gap-2 border-b border-white/5 bg-[#0d0d0d] px-3 py-2 md:items-center md:px-5">
           <div className="flex min-w-0 flex-1 flex-col gap-0.5 md:hidden">
             <span className="truncate text-[13px] font-medium text-white/90">{active.name}</span>
             <span className="truncate text-[11px] text-white/40">{active.category}</span>
@@ -415,7 +415,7 @@ export function Customizer() {
             <Icon icon="lucide:sliders-horizontal" width={15} height={15} className="text-white/60" />
             <span className="text-[13px] font-medium text-white/90">Customize</span>
           </div>
-          <div className="flex items-center gap-0.5">
+          <div className="flex min-w-0 flex-wrap items-center justify-end gap-0.5">
             <Button
               variant="ghost"
               size="icon-sm"
@@ -520,7 +520,7 @@ export function Customizer() {
         </div>
 
         {/* Scrollable controls */}
-        <div className="ui-styled-scrollbar flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain px-5 pt-6 pb-4">
+        <div className="ui-styled-scrollbar flex min-h-0 min-w-0 flex-1 flex-col gap-4 overflow-x-hidden overflow-y-auto overscroll-contain px-3 pt-5 pb-4 md:px-5 md:pt-6">
           {/* Scrollbar CSS sutil para igualar el aspecto técnico */}
           <style>{`
             .ui-styled-scrollbar::-webkit-scrollbar {
@@ -564,7 +564,7 @@ export function Customizer() {
           <div className="h-px bg-white/5" />
 
           {/* Layers (Tu componente original se mantiene aquí) */}
-          <div className="flex flex-col gap-4">
+          <div className="flex min-w-0 flex-col gap-4">
             <LayerPanel
               layers={effectiveLayers}
               onUpdateLayer={handleUpdateLayer}
@@ -577,7 +577,7 @@ export function Customizer() {
           <div className="h-px bg-white/5" />
 
           {/* Export (Tu componente original se mantiene aquí) */}
-          <div className="flex flex-col gap-4">
+          <div className="flex min-w-0 flex-col gap-4">
             <ExportPanel
               format={format}
               onFormatChange={setFormat}
@@ -589,11 +589,11 @@ export function Customizer() {
         </div>
 
         {/* Fixed export actions - Fondo contrastado abajo */}
-        <div className="shrink-0 border-t border-white/5 bg-[#0d0d0d]">
-          <div className="px-5 pt-3 pb-2 flex flex-col gap-2">
+        <div className="min-w-0 shrink-0 border-t border-white/5 bg-[#0d0d0d]">
+          <div className="flex flex-col gap-2 px-3 pt-3 pb-2 md:px-5">
             <Button
               onClick={() => handleCopy(deferredAiPrompt, "AI Prompt")}
-              className="w-full"
+              className="w-full min-w-0"
             >
               {copied === "AI Prompt" ? (
                 <Check className="size-3" />
@@ -602,12 +602,12 @@ export function Customizer() {
               )}
               {copied === "AI Prompt" ? "Prompt Copied!" : "Copy AI Prompt"}
             </Button>
-            <div className="flex items-center gap-2">
+            <div className="grid min-w-0 grid-cols-1 gap-2 sm:grid-cols-2">
               <Button
                 variant="outline"
                 onClick={() => handleDownload("png")}
                 disabled={downloading}
-                className="flex-1 border-white/10 bg-white/10 text-white hover:border-primary hover:bg-white/15 hover:text-white"
+                className="min-w-0 border-white/10 bg-white/10 text-white hover:border-primary hover:bg-white/15 hover:text-white"
               >
                 {downloading ? (
                   <LoaderCircle className="size-3 animate-spin" />
@@ -620,7 +620,7 @@ export function Customizer() {
                 variant="outline"
                 onClick={() => handleDownload("svg")}
                 disabled={downloading}
-                className="flex-1 border-white/10 bg-white/10 text-white hover:border-primary hover:bg-white/15 hover:text-white"
+                className="min-w-0 border-white/10 bg-white/10 text-white hover:border-primary hover:bg-white/15 hover:text-white"
               >
                 <FileDown className="size-3" />
                 Download SVG

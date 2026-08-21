@@ -38,7 +38,7 @@ export function LayerPanel({
   onReorder,
 }: Props) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex min-w-0 flex-col gap-2">
       <div className="flex items-center justify-between mb-1">
         <span className="text-[11px] uppercase tracking-wider text-white/50 font-medium">
           Layers ({layers.length})
@@ -144,7 +144,7 @@ function LayerRow({
   )
 
   return (
-    <div className="bg-white/5 border border-white/10 squircle-element p-3 space-y-2.5 transition-all hover:border-white/20">
+    <div className="min-w-0 space-y-2.5 border border-white/10 bg-white/5 p-3 squircle-element transition-all hover:border-white/20">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -183,42 +183,42 @@ function LayerRow({
       </div>
 
       {/* Blend mode */}
-      <div className="flex items-center gap-2">
-        <label className="text-[12px] text-white/40 w-12 shrink-0">Blend</label>
+      <div className="flex min-w-0 items-center gap-2">
+        <label className="w-14 shrink-0 text-[12px] text-white/40">Blend</label>
         <CustomSelect
           value={layer.blendMode}
           onChange={handleBlendChange}
           options={BLEND_OPTIONS}
-          className="flex-1"
+          className="min-w-0 flex-1"
         />
       </div>
 
       {/* Blur slider */}
-      <div className="flex items-center gap-2">
-        <label className="text-[12px] text-white/40 w-12 shrink-0">Blur</label>
+      <div className="flex min-w-0 items-center gap-2">
+        <label className="w-14 shrink-0 text-[12px] text-white/40">Blur</label>
         <Slider
           min={0}
           max={100}
           value={[layer.blur]}
           onValueChange={handleBlurChange}
           onValueCommit={handleBlurCommit}
-          className="flex-1"
+          className="min-w-0 flex-1"
         />
-        <span className="text-[12px] text-white/50 w-8 text-right font-mono">{layer.blur}px</span>
+        <span className="w-8 shrink-0 text-right font-mono text-[12px] text-white/50">{layer.blur}px</span>
       </div>
 
       {/* Opacity slider */}
-      <div className="flex items-center gap-2">
-        <label className="text-[12px] text-white/40 w-12 shrink-0">Opacity</label>
+      <div className="flex min-w-0 items-center gap-2">
+        <label className="w-14 shrink-0 text-[12px] text-white/40">Opacity</label>
         <Slider
           min={0}
           max={100}
           value={[Math.round((layer.opacity ?? 1) * 100)]}
           onValueChange={handleOpacityChange}
           onValueCommit={handleOpacityCommit}
-          className="flex-1"
+          className="min-w-0 flex-1"
         />
-        <span className="text-[12px] text-white/50 w-8 text-right font-mono">{Math.round((layer.opacity ?? 1) * 100)}%</span>
+        <span className="w-8 shrink-0 text-right font-mono text-[12px] text-white/50">{Math.round((layer.opacity ?? 1) * 100)}%</span>
       </div>
     </div>
   );

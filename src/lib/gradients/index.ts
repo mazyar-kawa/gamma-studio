@@ -13,7 +13,7 @@ import type { Gradient } from "./types"
 
 export type { Category, CategoryMeta, Gradient, GradientMood, Layer } from "./types"
 export { CATEGORIES, FEATURED_IDS } from "./categories"
-export { DARK_BG, LIGHT_BG, gradientToCSS, gradientLayerStyle, isLightBase, isRepeatingLayer, resolveBlendMode, resolveCardLabelColor, resolveDisplayContext, scaleBlurFull } from "./helpers"
+export { DARK_BG, LIGHT_BG, gradientToCSS, gradientLayerStyle, isLightBase, isRepeatingLayer, layerBackgroundStyle, resolveBlendMode, resolveCardLabelColor, resolveDisplayContext, scaleBlurFull } from "./helpers"
 export type { DisplayContext } from "./helpers"
 
 const COMBINED: Gradient[] = [
