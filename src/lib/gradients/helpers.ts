@@ -75,6 +75,31 @@ export function isRepeatingLayer(layer: Layer): boolean {
   return REPEATING_GRADIENT.test(layer.background)
 }
 
+/**
+ * Longhand-only background styles. Mixing `background` (shorthand) with
+ * `backgroundRepeat` / `backgroundSize` on rerender triggers a React warning.
+ *
+ * `backgroundColor: transparent` is required: the old shorthand reset it, and
+ * mix-blend-mode (light-theme multiply) fails if a leftover color stays on the
+ * layer.
+ */
+export function layerBackgroundStyle(layer: Layer): CSSProperties {
+  const repeating = isRepeatingLayer(layer)
+  const hasTileSize = Boolean(layer.backgroundSize)
+
+  return {
+    backgroundColor: "transparent",
+    backgroundImage: layer.background,
+    backgroundPosition: "center",
+    backgroundSize: hasTileSize
+      ? layer.backgroundSize
+      : repeating
+        ? "auto"
+        : "100% 100%",
+    backgroundRepeat: hasTileSize || repeating ? "repeat" : "no-repeat",
+  }
+}
+
 /** Inline styles for one gradient layer (cards, thumbnails). */
 export function gradientLayerStyle(
   layer: Layer,
@@ -83,16 +108,9 @@ export function gradientLayerStyle(
 ): CSSProperties {
   const maxBlur = options?.maxBlur ?? 24
   const blur = layer.blur > 0 ? Math.min(layer.blur, maxBlur) : 0
-  const repeating = isRepeatingLayer(layer)
 
   return {
-    background: layer.background,
-    ...(layer.backgroundSize
-      ? { backgroundSize: layer.backgroundSize, backgroundRepeat: "repeat" }
-      : repeating
-        ? { backgroundRepeat: "repeat" }
-        : { backgroundSize: "cover", backgroundRepeat: "no-repeat" }),
-    backgroundPosition: "center",
+    ...layerBackgroundStyle(layer),
     mixBlendMode: resolveBlendMode(layer.blendMode, light) as CSSProperties["mixBlendMode"],
     filter: blur > 0 ? `blur(${blur}px)` : undefined,
     opacity: layer.opacity ?? 1,

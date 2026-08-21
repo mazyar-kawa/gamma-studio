@@ -3,7 +3,7 @@
 import type { CSSProperties } from "react"
 import { GrainOverlay } from "@/components/GrainOverlay"
 import {
-  isRepeatingLayer,
+  layerBackgroundStyle,
   resolveBlendMode,
   scaleBlurFull,
   type Layer,
@@ -19,31 +19,9 @@ interface GradientLayerViewProps {
 }
 
 function safeLayerStyle(layer: Layer): CSSProperties {
-  const repeating = isRepeatingLayer(layer)
-
   return {
-    background: layer.background,
-    backgroundPosition: "center",
-    ...(layer.backgroundSize
-      ? { backgroundSize: layer.backgroundSize, backgroundRepeat: "repeat" }
-      : repeating
-        ? { backgroundRepeat: "repeat" }
-        : { backgroundSize: "cover", backgroundRepeat: "no-repeat" }),
+    ...layerBackgroundStyle(layer),
     opacity: layer.opacity ?? 1,
-  }
-}
-
-function richLayerStyle(layer: Layer): CSSProperties {
-  const repeating = isRepeatingLayer(layer)
-
-  return {
-    background: layer.background,
-    backgroundPosition: "center",
-    ...(layer.backgroundSize
-      ? { backgroundSize: layer.backgroundSize, backgroundRepeat: "repeat" }
-      : repeating
-        ? { backgroundRepeat: "repeat" }
-        : { backgroundSize: "cover", backgroundRepeat: "no-repeat" }),
   }
 }
 
@@ -54,7 +32,7 @@ function RichGradientLayer({
 }: GradientLayerViewProps) {
   const blendMode = resolveBlendMode(layer.blendMode, light) as CSSProperties["mixBlendMode"]
   const opacity = layer.opacity ?? 1
-  const bgStyle = richLayerStyle(layer)
+  const bgStyle = layerBackgroundStyle(layer)
 
   if (mode === "full") {
     const scaled = scaleBlurFull(layer.blur)

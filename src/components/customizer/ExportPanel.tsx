@@ -56,7 +56,7 @@ export function ExportPanel({ format, onFormatChange, code, copied, onCopy }: Pr
   );
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex min-w-0 flex-col gap-3">
       <span className="text-[11px] uppercase tracking-wider text-white/50 font-medium">
         Export
       </span>
@@ -69,7 +69,7 @@ export function ExportPanel({ format, onFormatChange, code, copied, onCopy }: Pr
           const idx = EXPORT_FORMATS.findIndex((f) => f.id === format);
           if (idx !== -1) handleTabKeyDown(e, idx);
         }}
-        className="flex flex-wrap gap-1"
+        className="flex min-w-0 flex-wrap gap-1"
       >
         {EXPORT_FORMATS.map((f, i) => (
           <button
@@ -100,19 +100,22 @@ export function ExportPanel({ format, onFormatChange, code, copied, onCopy }: Pr
         role="tabpanel"
         id="export-code-panel"
         aria-labelledby={`fmt-${format}`}
-        className="relative min-h-[200px] bg-black/40 border border-white/10 squircle-element"
+        className="relative min-h-[160px] min-w-0 max-w-full overflow-hidden bg-black/40 border border-white/10 squircle-element"
       >
         <CodeBlock code={code} language={FORMAT_LANGS[format]} />
         <button
           onClick={() => onCopy(code, formatLabel)}
-          className="absolute top-2 right-4 flex items-center gap-1 bg-white/90 hover:bg-white/20 text-black hover:text-white text-[12px] px-2 py-1 rounded transition-all"
+          className="absolute top-2 right-2 z-10 flex max-w-[calc(100%-1rem)] items-center gap-1 truncate rounded bg-white/90 px-2 py-1 text-[11px] text-black transition-all hover:bg-white/20 hover:text-white md:right-3 md:text-[12px]"
         >
           <Icon
             icon={copied === formatLabel ? "lucide:check" : "lucide:clipboard-copy"}
             width={11}
             height={11}
+            className="shrink-0"
           />
-          {copied === formatLabel ? "Copied!" : `Copy ${formatLabel}`}
+          <span className="truncate">
+            {copied === formatLabel ? "Copied!" : `Copy ${formatLabel}`}
+          </span>
         </button>
       </div>
     </div>

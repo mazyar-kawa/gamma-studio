@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { GradientStack } from "@/components/GradientLayerView"
 import { useGradients } from "@/components/GradientProvider"
-import { isLightBase, type Layer } from "@/lib/gradients"
+import { resolveDisplayContext, type Layer } from "@/lib/gradients"
 import {
   SWATCH_CAPTURE_DELAY_MS,
   backgroundCacheKey,
@@ -27,7 +27,8 @@ interface BackgroundStackProps {
 }
 
 export function GammaBackground() {
-  const { active, fullscreen } = useGradients()
+  const { active, fullscreen, isDark } = useGradients()
+  const { light, base } = resolveDisplayContext(isDark)
 
   if (fullscreen || !active) return null
 
@@ -38,9 +39,9 @@ export function GammaBackground() {
     >
       <GammaBackgroundStack
         id={active.id}
-        base={active.base}
+        base={base}
         layers={active.layers}
-        light={isLightBase(active.base)}
+        light={light}
         grain={active.grain ?? false}
       />
     </div>
